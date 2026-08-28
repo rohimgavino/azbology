@@ -4,12 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AZBOLOGY — Indonesian Single Origin Coffee & Artisan Tea</title>
+    
+    <!-- Open Graph / SEO Meta Tags -->
+    <meta name="description" content="AZBOLOGY: Indonesian Single Origin Coffee from Temanggung & Kalibening, and Pucuk Hening Artisan Tea. Ethically sourced from farm to cup.">
+    <meta property="og:title" content="AZBOLOGY — Single Origin Coffee & Artisan Tea">
+    <meta property="og:description" content="Connecting highland farmers in Temanggung and Kalibening to your cup. Halal, thayyib, and sustainable.">
+    <meta property="og:image" content="https://rohimgavino.github.io/azbology/images/img_p1_4.jpeg">
+    <meta property="og:url" content="https://rohimgavino.github.io/azbology/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts: Cormorant Garamond, Plus Jakarta Sans, and Noto Serif SC for Chinese -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Noto+Serif+SC:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
     <script>
         tailwind.config = {
             theme: {
@@ -60,6 +71,10 @@
             </div>
             
             <div class="flex items-center space-x-4">
+                <a href="Katalog%20Kopi%20AZBO-2026-Agustus.pdf" download class="hover:text-azbo-ochre transition hidden sm:inline-flex items-center gap-1 font-semibold text-azbo-ochre">
+                    <span>📄</span> <span data-i18n="topbar_catalog">Download PDF Catalog</span>
+                </a>
+                <span class="hidden sm:inline">|</span>
                 <a href="#b2b" class="hover:text-azbo-ochre transition hidden sm:inline tracking-wider font-medium uppercase text-[11px]" data-i18n="topbar_b2b">B2B & Global Export</a>
                 <span class="hidden sm:inline">|</span>
                 <a href="https://wa.me/62816652714" target="_blank" class="hover:text-azbo-ochre transition flex items-center gap-1 font-medium">
@@ -86,6 +101,7 @@
                 <span class="text-[11px] uppercase tracking-widest bg-azbo-sand px-2 py-0.5 rounded text-azbo-green font-semibold">by AZBO</span>
             </div>
 
+            <!-- DESKTOP NAV -->
             <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-azbo-charcoal tracking-wide">
                 <a href="#katalog" class="hover:text-azbo-coffee transition" data-i18n="nav_coffee">Coffee Catalog</a>
                 <a href="#pucuk-hening" class="hover:text-azbo-green-light transition flex items-center gap-1">
@@ -96,11 +112,40 @@
                 <a href="#b2b" class="hover:text-azbo-coffee transition" data-i18n="nav_b2b">Wholesale & Export</a>
             </nav>
 
-            <div class="flex items-center space-x-4">
+            <div class="hidden md:flex items-center space-x-3">
+                <a href="Katalog%20Kopi%20AZBO-2026-Agustus.pdf" download class="border border-azbo-green text-azbo-green hover:bg-azbo-green hover:text-white px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition">
+                    PDF Catalog
+                </a>
                 <a href="https://wa.me/62816652714?text=Hello%20Azbology,%20I%20am%20interested%20in%20your%20coffee%20and%20tea%20products" 
                    target="_blank" 
-                   class="bg-azbo-green text-white px-6 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider hover:bg-azbo-green-light transition shadow-sm hover:shadow flex items-center gap-2">
+                   class="bg-azbo-green text-white px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider hover:bg-azbo-green-light transition shadow-sm hover:shadow flex items-center gap-2">
                     <span data-i18n="nav_cta">Order via WhatsApp</span>
+                </a>
+            </div>
+
+            <!-- MOBILE HAMBURGER BUTTON -->
+            <div class="md:hidden flex items-center">
+                <button onclick="toggleMobileMenu()" class="text-azbo-green p-2 focus:outline-none" aria-label="Toggle Navigation">
+                    <svg id="menu-icon" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- MOBILE MENU DRAWER -->
+        <div id="mobile-menu" class="hidden md:hidden bg-azbo-cream border-b border-azbo-sand px-6 py-5 space-y-4 shadow-lg">
+            <a href="#katalog" onclick="toggleMobileMenu()" class="block text-base font-medium text-azbo-charcoal hover:text-azbo-coffee" data-i18n="nav_coffee">Coffee Catalog</a>
+            <a href="#pucuk-hening" onclick="toggleMobileMenu()" class="block text-base font-medium text-azbo-green" data-i18n="nav_tea">🍃 Pucuk Hening Tea</a>
+            <a href="#cerita" onclick="toggleMobileMenu()" class="block text-base font-medium text-azbo-charcoal hover:text-azbo-coffee" data-i18n="nav_story">Our Story</a>
+            <a href="#seduh" onclick="toggleMobileMenu()" class="block text-base font-medium text-azbo-charcoal hover:text-azbo-coffee" data-i18n="nav_brew">Brewing Guide</a>
+            <a href="#b2b" onclick="toggleMobileMenu()" class="block text-base font-medium text-azbo-charcoal hover:text-azbo-coffee" data-i18n="nav_b2b">Wholesale & Export</a>
+            <div class="pt-3 border-t border-azbo-sand flex flex-col gap-2">
+                <a href="Katalog%20Kopi%20AZBO-2026-Agustus.pdf" download class="text-center border border-azbo-green text-azbo-green py-2.5 rounded-full text-xs font-bold uppercase tracking-wider">
+                    📄 Download PDF Catalog
+                </a>
+                <a href="https://wa.me/62816652714" target="_blank" class="text-center bg-azbo-green text-white py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider">
+                    WhatsApp CS (+62 816 652 714)
                 </a>
             </div>
         </div>
@@ -125,6 +170,30 @@
                 <a href="#pucuk-hening" class="w-full sm:w-auto bg-white/10 hover:bg-white/20 border border-white/30 text-white text-xs uppercase tracking-widest font-semibold px-8 py-4 rounded-full transition backdrop-blur-sm" data-i18n="hero_btn_tea">
                     🍃 Discover Pucuk Hening Tea
                 </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRUST BADGES / CERTIFICATIONS -->
+    <section class="py-6 bg-azbo-sand border-b border-azbo-ochre/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap items-center justify-around gap-6 text-azbo-green font-semibold text-xs uppercase tracking-wider text-center">
+                <div class="flex items-center gap-2">
+                    <span class="text-lg">🌿</span>
+                    <span>100% Single Origin Indonesian Beans</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="text-lg">🕌</span>
+                    <span>Halal & Thayyib Certified Management</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="text-lg">☀️</span>
+                    <span>Eco-Friendly Solar Dome Drying</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="text-lg">🤝</span>
+                    <span>Fair Trade & Smallholder Empowerment</span>
+                </div>
             </div>
         </div>
     </section>
@@ -444,18 +513,84 @@
         </div>
     </section>
 
-    <!-- B2B / WHOLESALE SECTION -->
-    <section id="b2b" class="py-16 bg-azbo-green text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-4xl font-heading font-bold mb-4" data-i18n="b2b_title">Coffee & Tea Supply for Your Business</h2>
-            <p class="text-stone-300 text-sm max-w-2xl mx-auto mb-8 leading-relaxed" data-i18n="b2b_desc">
-                We supply consistent roasted coffee beans for cafes, premium artisan tea for fine dining & hotels, and customized corporate gift hampers worldwide.
-            </p>
-            <a href="https://wa.me/62816652714?text=Hello%20Azbology,%20I%20am%20interested%20in%20B2B%20/%20Export%20partnership" 
-               target="_blank" 
-               class="inline-block bg-azbo-ochre text-azbo-charcoal text-xs uppercase tracking-widest font-bold px-8 py-4 rounded-full hover:bg-amber-400 transition shadow-md" data-i18n="b2b_btn">
-                B2B & Export Inquiry
-            </a>
+    <!-- B2B & SAMPLE REQUEST SECTION -->
+    <section id="b2b" class="py-20 bg-azbo-green text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span class="text-xs uppercase tracking-widest text-azbo-ochre font-bold" data-i18n="b2b_tag">Wholesale & Global Partnership</span>
+                    <h2 class="text-4xl lg:text-5xl font-heading font-bold mt-2 mb-4 leading-tight" data-i18n="b2b_title">Coffee & Tea Supply for Your Business</h2>
+                    <p class="text-stone-300 text-sm mb-6 leading-relaxed" data-i18n="b2b_desc">
+                        We supply consistent roasted coffee beans for cafes, premium artisan tea for fine dining & hotels, and customized corporate gift hampers worldwide.
+                    </p>
+                    
+                    <div class="space-y-3 text-sm text-stone-300 mb-8">
+                        <div class="flex items-center gap-2">
+                            <span class="text-emerald-400">✔</span>
+                            <span>Bulk roasted beans & green coffee beans with customized roast profiles.</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-emerald-400">✔</span>
+                            <span>First-grade single origin loose-leaf artisan tea supply.</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-emerald-400">✔</span>
+                            <span>Private label, custom blending, and international export documentation.</span>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap items-center gap-4">
+                        <a href="Katalog%20Kopi%20AZBO-2026-Agustus.pdf" download class="bg-white/10 hover:bg-white/20 border border-white/30 text-white text-xs uppercase tracking-widest font-semibold px-6 py-3.5 rounded-full transition">
+                            📄 Download PDF Catalog
+                        </a>
+                        <a href="https://wa.me/62816652714?text=Hello%20Azbology,%20I%20am%20interested%20in%20B2B%20/%20Export%20partnership" 
+                           target="_blank" 
+                           class="bg-azbo-ochre text-azbo-charcoal text-xs uppercase tracking-widest font-bold px-6 py-3.5 rounded-full hover:bg-amber-400 transition shadow-md">
+                            Direct WhatsApp B2B
+                        </a>
+                    </div>
+                </div>
+
+                <!-- B2B SAMPLE REQUEST FORM -->
+                <div class="bg-white text-azbo-charcoal p-8 sm:p-10 rounded-3xl shadow-2xl border border-azbo-sand">
+                    <h3 class="text-2xl font-heading font-bold text-azbo-green mb-1" data-i18n="form_title">Request B2B Sample & Quote</h3>
+                    <p class="text-xs text-gray-500 mb-6" data-i18n="form_subtitle">Fill in the details below. Our team will send sample specifications to your WhatsApp.</p>
+                    
+                    <form onsubmit="handleSampleSubmit(event)" class="space-y-4 text-xs">
+                        <div>
+                            <label class="block font-bold text-gray-700 mb-1" data-i18n="form_name">Contact Name / Company Name *</label>
+                            <input type="text" id="form-name" required placeholder="e.g. John Doe / Roastery Cafe" class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:border-azbo-green">
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block font-bold text-gray-700 mb-1" data-i18n="form_phone">WhatsApp / Phone *</label>
+                                <input type="tel" id="form-phone" required placeholder="+62 812..." class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:border-azbo-green">
+                            </div>
+                            <div>
+                                <label class="block font-bold text-gray-700 mb-1" data-i18n="form_city">City & Country *</label>
+                                <input type="text" id="form-city" required placeholder="e.g. Jakarta, Indonesia" class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:border-azbo-green">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block font-bold text-gray-700 mb-1" data-i18n="form_product">Product Interest *</label>
+                            <select id="form-product" class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:border-azbo-green bg-white">
+                                <option value="Temanggung Honey Coffee">Temanggung Single Origin Coffee (Honey / Natural)</option>
+                                <option value="Kalibening Full Wash Coffee">Kalibening Speciality Coffee (Full Wash)</option>
+                                <option value="Pucuk Hening Artisan Tea">Pucuk Hening Artisan Tea (Black / Green Tea)</option>
+                                <option value="All Coffee and Tea Samples">Complete Sample Kit (Coffee + Tea)</option>
+                                <option value="Custom Blend & Private Label">Custom Blend / Private Label / Corporate Gift</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block font-bold text-gray-700 mb-1" data-i18n="form_notes">Estimated Monthly Volume / Notes</label>
+                            <textarea id="form-notes" rows="2" placeholder="e.g. 20-50 kg/month for coffee shop..." class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:border-azbo-green"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-azbo-green hover:bg-azbo-green-light text-white font-bold py-3.5 rounded-xl text-xs uppercase tracking-wider transition shadow-md">
+                            Submit Sample Request
+                        </button>
+                    </form>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -467,6 +602,10 @@
                 <p class="text-xs leading-relaxed text-stone-400" data-i18n="footer_about">
                     Indonesian single origin coffee and artisan tea line under the local initiative of AZBO Group.
                 </p>
+                <div class="pt-2 text-[11px] text-stone-500">
+                    <div>P-IRT & Halal Compliant</div>
+                    <div>Sleman, D.I. Yogyakarta</div>
+                </div>
             </div>
 
             <div>
@@ -476,6 +615,7 @@
                     <li><a href="#pucuk-hening" class="hover:text-white transition" data-i18n="nav_tea">Pucuk Hening Tea</a></li>
                     <li><a href="#cerita" class="hover:text-white transition" data-i18n="nav_story">Our Story</a></li>
                     <li><a href="#b2b" class="hover:text-white transition" data-i18n="nav_b2b">Wholesale & Export</a></li>
+                    <li><a href="Katalog%20Kopi%20AZBO-2026-Agustus.pdf" download class="text-azbo-ochre hover:underline">Download Catalog PDF</a></li>
                 </ul>
             </div>
 
@@ -501,11 +641,12 @@
         </div>
     </footer>
 
-    <!-- MULTI-LANGUAGE SCRIPT (EN, ZH, ID) -->
+    <!-- MULTI-LANGUAGE SCRIPT (EN, ZH, ID) & APP LOGIC -->
     <script>
         const translations = {
             en: {
                 topbar_tagline: "Worldwide & Domestic Shipping • Halal & Ethical Sourcing",
+                topbar_catalog: "Download PDF Catalog",
                 topbar_b2b: "B2B & Global Export",
                 nav_coffee: "Coffee Catalog",
                 nav_tea: "Pucuk Hening Tea",
@@ -556,9 +697,16 @@
                 brew_tea_water: "Water Volume:",
                 brew_tea_temp: "Water Temp:",
                 brew_tea_time: "Steeping Time:",
+                b2b_tag: "Wholesale & Global Partnership",
                 b2b_title: "Coffee & Tea Supply for Your Business",
                 b2b_desc: "We supply consistent roasted coffee beans for cafes, premium artisan tea for fine dining & hotels, and customized corporate gift hampers worldwide.",
-                b2b_btn: "B2B & Export Inquiry",
+                form_title: "Request B2B Sample & Quote",
+                form_subtitle: "Fill in the details below. Our team will send sample specifications to your WhatsApp.",
+                form_name: "Contact Name / Company Name *",
+                form_phone: "WhatsApp / Phone *",
+                form_city: "City & Country *",
+                form_product: "Product Interest *",
+                form_notes: "Estimated Monthly Volume / Notes",
                 footer_about: "Indonesian single origin coffee and artisan tea line under the local initiative of AZBO Group.",
                 footer_nav: "Navigation",
                 footer_contact: "Contact & Location",
@@ -566,6 +714,7 @@
             },
             zh: {
                 topbar_tagline: "全球与印尼全境配送 • 清真品质与公平贸易",
+                topbar_catalog: "下载官方PDF目录",
                 topbar_b2b: "B2B合作与国际出口",
                 nav_coffee: "咖啡目录",
                 nav_tea: "静芽手工茶",
@@ -616,9 +765,16 @@
                 brew_tea_water: "注水量:",
                 brew_tea_temp: "适宜水温:",
                 brew_tea_time: "浸润时间:",
+                b2b_tag: "批发采购与全球合作",
                 b2b_title: "为您的商业空间提供稳定供应",
                 b2b_desc: "我们为精品咖啡馆、高端餐厅与星级酒店提供稳定的单品豆与工匠茶供应，并承接企业定制礼盒。",
-                b2b_btn: "洽谈B2B与出口合作",
+                form_title: "索取B2B样品与报价单",
+                form_subtitle: "请填写以下信息，我们的业务团队将通过WhatsApp向您发送样品规格。",
+                form_name: "联系人姓名 / 公司全称 *",
+                form_phone: "WhatsApp / 联络电话 *",
+                form_city: "所在城市与国家 *",
+                form_product: "意向采购产品 *",
+                form_notes: "预计月采购量 / 补充说明",
                 footer_about: "AZBO集团旗下印尼单一产区咖啡与手工工匠茶品牌。",
                 footer_nav: "快速导航",
                 footer_contact: "联系方式与地址",
@@ -626,6 +782,7 @@
             },
             id: {
                 topbar_tagline: "Pengiriman Seluruh Indonesia & Ekspor • Halal & Berkelanjutan",
+                topbar_catalog: "Unduh Katalog PDF",
                 topbar_b2b: "Kemitraan B2B & Horeca",
                 nav_coffee: "Katalog Kopi",
                 nav_tea: "Pucuk Hening Tea",
@@ -676,9 +833,16 @@
                 brew_tea_water: "Volume Air:",
                 brew_tea_temp: "Suhu Air:",
                 brew_tea_time: "Waktu Seduh:",
+                b2b_tag: "Grosir & Kemitraan Global",
                 b2b_title: "Pasokan Kopi & Teh untuk Bisnis Anda",
                 b2b_desc: "Kami melayani kebutuhan pasokan biji kopi kiloan untuk kedai kopi/kafe, teh artisan untuk resto & hotel, hingga custom hampers perusahaan.",
-                b2b_btn: "Konsultasi Kemitraan B2B",
+                form_title: "Permintaan Sampel & Penawaran B2B",
+                form_subtitle: "Isi data di bawah ini. Tim kami akan mengirimkan spesifikasi sampel langsung ke WhatsApp Anda.",
+                form_name: "Nama Kontak / Nama Bisnis *",
+                form_phone: "Nomor WhatsApp / HP *",
+                form_city: "Kota & Negara *",
+                form_product: "Produk yang Diminati *",
+                form_notes: "Estimasi Kebutuhan / Catatan",
                 footer_about: "Lini produk kopi single origin dan teh artisan dari inisiatif lokal AZBO Group.",
                 footer_nav: "Navigasi",
                 footer_contact: "Kontak & Lokasi",
@@ -710,6 +874,27 @@
             // Save preference to localStorage
             localStorage.setItem('azbology_lang', lang);
             document.documentElement.lang = lang;
+        }
+
+        // Toggle Mobile Menu
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Handle B2B Sample Request Submit
+        function handleSampleSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('form-name').value;
+            const phone = document.getElementById('form-phone').value;
+            const city = document.getElementById('form-city').value;
+            const product = document.getElementById('form-product').value;
+            const notes = document.getElementById('form-notes').value;
+
+            const text = `Halo AZBOLOGY B2B Team,\n\nSaya ingin mengajukan permintaan sampel B2B:\n- Nama/Bisnis: ${name}\n- No. Kontak: ${phone}\n- Kota/Negara: ${city}\n- Produk: ${product}\n- Catatan: ${notes || '-'}`;
+            
+            const waUrl = `https://wa.me/62816652714?text=${encodeURIComponent(text)}`;
+            window.open(waUrl, '_blank');
         }
 
         // Initialize with default or saved language (Default: English)
