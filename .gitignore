@@ -1,0 +1,11 @@
+# Dependencies & temp files
+__pycache__/
+*.py[cod]
+.venv/
+env/
+venv/
+extracted_catalog.txt
+
+# OS generated
+Thumbs.db
+.DS_Store

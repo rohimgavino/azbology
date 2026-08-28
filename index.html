@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AZBOLOGY — Indonesian Single Origin Coffee & Artisan Tea</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Cormorant Garamond, Plus Jakarta Sans, and Noto Serif SC for Chinese -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Noto+Serif+SC:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'azbo-green': '#1E3A2F',
+                        'azbo-green-light': '#2D5545',
+                        'azbo-coffee': '#8B4513',
+                        'azbo-coffee-dark': '#5C2C0C',
+                        'azbo-cream': '#FBF8F2',
+                        'azbo-sand': '#F0EAE1',
+                        'azbo-ochre': '#D4A373',
+                        'azbo-charcoal': '#232724'
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', '"Noto Serif SC"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #FBF8F2;
+            color: #232724;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        h1, h2, h3, .font-heading {
+            font-family: 'Cormorant Garamond', 'Noto Serif SC', serif;
+            letter-spacing: -0.01em;
+        }
+        .hero-banner {
+            background: linear-gradient(to bottom, rgba(20, 35, 28, 0.78), rgba(20, 35, 28, 0.92)), url('images/img_p1_4.jpeg');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- TOP BAR -->
+    <div class="bg-azbo-green text-xs text-azbo-sand py-2.5 px-4 border-b border-white/10">
+        <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+            <div class="flex items-center space-x-2">
+                <span class="inline-block w-2 h-2 rounded-full bg-emerald-400"></span>
+                <span data-i18n="topbar_tagline">Worldwide & Domestic Shipping • Halal, Thayyib & Fair Trade</span>
+            </div>
+            
+            <div class="flex items-center space-x-4">
+                <a href="#b2b" class="hover:text-azbo-ochre transition hidden sm:inline tracking-wider font-medium uppercase text-[11px]" data-i18n="topbar_b2b">B2B & Global Export</a>
+                <span class="hidden sm:inline">|</span>
+                <a href="https://wa.me/62816652714" target="_blank" class="hover:text-azbo-ochre transition flex items-center gap-1 font-medium">
+                    <span>CS: +62 816 652 714</span>
+                </a>
+                <span>|</span>
+                <!-- LANGUAGE SWITCHER BUTTONS -->
+                <div class="inline-flex bg-black/30 rounded-lg p-0.5 border border-white/15 text-xs font-semibold">
+                    <button onclick="setLanguage('en')" id="btn-en" class="px-2.5 py-0.5 rounded transition bg-azbo-ochre text-azbo-charcoal font-bold">EN</button>
+                    <button onclick="setLanguage('zh')" id="btn-zh" class="px-2.5 py-0.5 rounded transition hover:text-azbo-ochre text-white">中文</button>
+                    <button onclick="setLanguage('id')" id="btn-id" class="px-2.5 py-0.5 rounded transition hover:text-azbo-ochre text-white">ID</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN NAVBAR -->
+    <header class="sticky top-0 z-50 bg-azbo-cream/95 backdrop-blur-md border-b border-azbo-sand">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <a href="#" class="text-3xl font-heading font-bold tracking-wider text-azbo-green flex items-center gap-2">
+                    <span class="text-azbo-coffee text-2xl">☕</span> AZBOLOGY
+                </a>
+                <span class="text-[11px] uppercase tracking-widest bg-azbo-sand px-2 py-0.5 rounded text-azbo-green font-semibold">by AZBO</span>
+            </div>
+
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-azbo-charcoal tracking-wide">
+                <a href="#katalog" class="hover:text-azbo-coffee transition" data-i18n="nav_coffee">Coffee Catalog</a>
+                <a href="#pucuk-hening" class="hover:text-azbo-green-light transition flex items-center gap-1">
+                    <span class="text-emerald-600">🍃</span> <span data-i18n="nav_tea">Pucuk Hening Tea</span>
+                </a>
+                <a href="#cerita" class="hover:text-azbo-coffee transition" data-i18n="nav_story">Our Story</a>
+                <a href="#seduh" class="hover:text-azbo-coffee transition" data-i18n="nav_brew">Brewing Guide</a>
+                <a href="#b2b" class="hover:text-azbo-coffee transition" data-i18n="nav_b2b">Wholesale & Export</a>
+            </nav>
+
+            <div class="flex items-center space-x-4">
+                <a href="https://wa.me/62816652714?text=Hello%20Azbology,%20I%20am%20interested%20in%20your%20coffee%20and%20tea%20products" 
+                   target="_blank" 
+                   class="bg-azbo-green text-white px-6 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider hover:bg-azbo-green-light transition shadow-sm hover:shadow flex items-center gap-2">
+                    <span data-i18n="nav_cta">Order via WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero-banner text-white py-28 md:py-40 px-4 relative overflow-hidden">
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <span class="inline-block bg-black/40 text-azbo-ochre border border-azbo-ochre/30 px-5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-widest mb-6 backdrop-blur-sm" data-i18n="hero_badge">
+                Single Origin • Red Cherry Harvest • Farm to Cup
+            </span>
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-heading font-bold tracking-normal leading-[1.1] mb-6" data-i18n="hero_title">
+                From Indonesia, For a Cup of World Spirit
+            </h1>
+            <p class="text-base md:text-lg text-gray-200 font-light max-w-2xl mx-auto mb-10 leading-relaxed" data-i18n="hero_subtitle">
+                Connecting the volcanic soils of Mount Sindoro, Sumbing, and Kalibening highland farmers directly to your cup. Managed with honesty, halal values, and sustainability.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#katalog" class="w-full sm:w-auto bg-azbo-ochre text-azbo-charcoal text-xs uppercase tracking-widest font-bold px-8 py-4 rounded-full hover:bg-amber-400 transition shadow-lg" data-i18n="hero_btn_coffee">
+                    ☕ Explore Coffee Collection
+                </a>
+                <a href="#pucuk-hening" class="w-full sm:w-auto bg-white/10 hover:bg-white/20 border border-white/30 text-white text-xs uppercase tracking-widest font-semibold px-8 py-4 rounded-full transition backdrop-blur-sm" data-i18n="hero_btn_tea">
+                    🍃 Discover Pucuk Hening Tea
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3 PILAR NILAI (VALUE PROPOSITION) -->
+    <section class="py-16 bg-white border-b border-azbo-sand">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Pilar 1 -->
+                <div class="p-8 rounded-2xl bg-azbo-cream border border-azbo-sand hover:shadow-md transition">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center text-2xl mb-4">
+                        🏔️
+                    </div>
+                    <h3 class="text-2xl font-heading font-bold text-azbo-green mb-2" data-i18n="pillar1_title">Transparent Origin</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed" data-i18n="pillar1_desc">
+                        Direct partnerships with highland farmers in Temanggung and Kalibening. Full traceability for every bean and leaf.
+                    </p>
+                </div>
+                <!-- Pilar 2 -->
+                <div class="p-8 rounded-2xl bg-azbo-cream border border-azbo-sand hover:shadow-md transition">
+                    <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center text-2xl mb-4">
+                        ⚖️
+                    </div>
+                    <h3 class="text-2xl font-heading font-bold text-azbo-green mb-2" data-i18n="pillar2_title">Standardized Process</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed" data-i18n="pillar2_desc">
+                        Strict red-cherry picking, controlled fermentation, hygienic solar drying, and precision roasting profile.
+                    </p>
+                </div>
+                <!-- Pilar 3 -->
+                <div class="p-8 rounded-2xl bg-azbo-cream border border-azbo-sand hover:shadow-md transition">
+                    <div class="w-12 h-12 rounded-xl bg-stone-100 text-stone-800 flex items-center justify-center text-2xl mb-4">
+                        🌱
+                    </div>
+                    <h3 class="text-2xl font-heading font-bold text-azbo-green mb-2" data-i18n="pillar3_title">Sustainable Impact</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed" data-i18n="pillar3_desc">
+                        Ensuring added value flows directly back to empower local farming families and sustain natural agroforestry.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DUAL ESSENCE BANNER: KOPI & TEH WITH CATALOG PHOTOGRAPHY -->
+    <section class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- Card Kopi -->
+            <div class="relative overflow-hidden rounded-3xl text-white p-8 md:p-12 flex flex-col justify-between min-h-[380px] shadow-lg group">
+                <div class="absolute inset-0 bg-cover bg-center transition duration-500 group-hover:scale-105" style="background-image: linear-gradient(to right, rgba(92, 44, 12, 0.92), rgba(92, 44, 12, 0.70)), url('images/img_p7_1.jpeg');"></div>
+                <div class="relative z-10">
+                    <span class="text-xs uppercase tracking-widest text-azbo-ochre font-bold bg-black/40 px-3 py-1 rounded-full backdrop-blur-sm" data-i18n="card_coffee_tag">Indonesian Single Origin</span>
+                    <h2 class="text-4xl font-heading font-bold mt-4 mb-2">AZBOLOGY Coffee</h2>
+                    <p class="text-stone-200 text-sm max-w-md mb-6 leading-relaxed" data-i18n="card_coffee_desc">
+                        Honest highland flavors from Mount Sindoro, Sumbing, and Kalibening. Crafted from farm to cup.
+                    </p>
+                </div>
+                <div class="relative z-10">
+                    <a href="#katalog" class="inline-flex items-center text-xs uppercase tracking-wider font-bold text-azbo-ochre hover:text-white transition gap-2">
+                        <span data-i18n="card_coffee_btn">View All Coffee Offerings</span> &rarr;
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card Teh Pucuk Hening -->
+            <div id="pucuk-hening" class="relative overflow-hidden rounded-3xl text-white p-8 md:p-12 flex flex-col justify-between min-h-[380px] shadow-lg group">
+                <div class="absolute inset-0 bg-cover bg-center transition duration-500 group-hover:scale-105" style="background-image: linear-gradient(to right, rgba(30, 58, 47, 0.92), rgba(30, 58, 47, 0.70)), url('images/img_p17_1.jpeg');"></div>
+                <div class="relative z-10">
+                    <span class="text-xs uppercase tracking-widest text-emerald-300 font-bold bg-black/40 px-3 py-1 rounded-full backdrop-blur-sm" data-i18n="card_tea_tag">Artisan Indonesian Tea</span>
+                    <h2 class="text-4xl font-heading font-bold mt-4 mb-2">PUCUK HENING</h2>
+                    <p class="text-stone-200 text-sm max-w-md mb-6 leading-relaxed" data-i18n="card_tea_desc">
+                        <em>“The finest taste born from serenity.”</em> Premium bud & two leaves standard for mindful tea moments.
+                    </p>
+                </div>
+                <div class="relative z-10">
+                    <a href="#katalog-teh" class="inline-flex items-center text-xs uppercase tracking-wider font-bold text-emerald-300 hover:text-white transition gap-2">
+                        <span data-i18n="card_tea_btn">Explore Artisan Tea</span> &rarr;
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KATALOG PRODUK PILIHAN WITH PDF PACKSHOTS -->
+    <section id="katalog" class="py-16 bg-azbo-sand/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-4xl font-heading font-bold text-azbo-green" data-i18n="catalog_title">Featured Collection</h2>
+                <p class="text-gray-600 text-sm mt-2" data-i18n="catalog_subtitle">Freshly roasted and carefully packed for the perfect cup.</p>
+            </div>
+
+            <!-- Grid Produk -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Item 1: Temanggung Honey -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-azbo-sand shadow-sm hover:shadow-md transition flex flex-col justify-between group">
+                    <div class="relative h-56 bg-stone-50 overflow-hidden flex items-center justify-center p-4">
+                        <img src="images/prod_temanggung_honey.jpg" alt="Temanggung Honey Coffee" class="h-full object-contain group-hover:scale-105 transition duration-300">
+                    </div>
+                    <div class="p-6">
+                        <div class="text-[11px] font-bold text-azbo-coffee uppercase tracking-wider mb-1">Temanggung Origin</div>
+                        <h3 class="text-xl font-heading font-bold text-azbo-charcoal">Temanggung Fine Coffee</h3>
+                        <span class="inline-block bg-amber-50 text-amber-800 text-[11px] px-2.5 py-0.5 rounded-full font-semibold mt-1">Honey Process</span>
+                        <div class="text-xs text-gray-500 mt-3 space-y-1">
+                            <div>🌱 <strong>Notes:</strong> Wild Honey, Brown Sugar, Citrus</div>
+                            <div>⛰️ <strong>Altitude:</strong> 1,200 - 1,450 MASL</div>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0 border-t border-gray-100 flex items-center justify-between mt-2">
+                        <div>
+                            <span class="text-xs text-gray-400 block" data-i18n="price_from">Starts from</span>
+                            <span class="font-bold text-azbo-green text-sm">IDR 75,000 / $5.00</span>
+                        </div>
+                        <a href="https://wa.me/62816652714?text=Hello,%20I%20would%20like%20to%20order%20Temanggung%20Honey%20Process" 
+                           target="_blank" 
+                           class="bg-azbo-green hover:bg-azbo-green-light text-white text-xs font-semibold px-4 py-2 rounded-full transition" data-i18n="btn_order">
+                            Order
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Item 2: Kalibening Full Wash -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-azbo-sand shadow-sm hover:shadow-md transition flex flex-col justify-between group">
+                    <div class="relative h-56 bg-stone-50 overflow-hidden flex items-center justify-center p-4">
+                        <img src="images/prod_kalibening_fullwash.jpg" alt="Kalibening Full Wash Coffee" class="h-full object-contain group-hover:scale-105 transition duration-300">
+                    </div>
+                    <div class="p-6">
+                        <div class="text-[11px] font-bold text-azbo-coffee uppercase tracking-wider mb-1">Kalibening Origin</div>
+                        <h3 class="text-xl font-heading font-bold text-azbo-charcoal">Kalibening Speciality</h3>
+                        <span class="inline-block bg-blue-50 text-blue-800 text-[11px] px-2.5 py-0.5 rounded-full font-semibold mt-1">Full Wash Process</span>
+                        <div class="text-xs text-gray-500 mt-3 space-y-1">
+                            <div>🌱 <strong>Notes:</strong> Clean Cup, Citrus, White Blossom</div>
+                            <div>⛰️ <strong>Altitude:</strong> 1,300+ MASL</div>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0 border-t border-gray-100 flex items-center justify-between mt-2">
+                        <div>
+                            <span class="text-xs text-gray-400 block" data-i18n="price_from">Starts from</span>
+                            <span class="font-bold text-azbo-green text-sm">IDR 85,000 / $5.50</span>
+                        </div>
+                        <a href="https://wa.me/62816652714?text=Hello,%20I%20would%20like%20to%20order%20Kalibening%20Full%20Wash" 
+                           target="_blank" 
+                           class="bg-azbo-green hover:bg-azbo-green-light text-white text-xs font-semibold px-4 py-2 rounded-full transition" data-i18n="btn_order">
+                            Order
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Item 3: Pucuk Hening Black Tea -->
+                <div id="katalog-teh" class="bg-white rounded-2xl overflow-hidden border border-azbo-sand shadow-sm hover:shadow-md transition flex flex-col justify-between group">
+                    <div class="relative h-56 bg-stone-50 overflow-hidden flex items-center justify-center p-4">
+                        <img src="images/prod_tea_black.jpg" alt="Pucuk Hening Black Tea" class="h-full object-contain group-hover:scale-105 transition duration-300">
+                    </div>
+                    <div class="p-6">
+                        <div class="text-[11px] font-bold text-emerald-700 uppercase tracking-wider mb-1">Pucuk Hening Series</div>
+                        <h3 class="text-xl font-heading font-bold text-azbo-charcoal">Artisan Black Tea</h3>
+                        <span class="inline-block bg-stone-100 text-stone-800 text-[11px] px-2.5 py-0.5 rounded-full font-semibold mt-1">Bud & Two Leaves</span>
+                        <div class="text-xs text-gray-500 mt-3 space-y-1">
+                            <div>🌱 <strong>Notes:</strong> Malty, Woody Warmth, Honey Finish</div>
+                            <div>🍃 <strong>Profile:</strong> Rich, Full-Bodied & Calming</div>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0 border-t border-gray-100 flex items-center justify-between mt-2">
+                        <div>
+                            <span class="text-xs text-gray-400 block" data-i18n="price_from">Starts from</span>
+                            <span class="font-bold text-azbo-green text-sm">IDR 65,000 / $4.20</span>
+                        </div>
+                        <a href="https://wa.me/62816652714?text=Hello,%20I%20would%20like%20to%20order%20Pucuk%20Hening%20Black%20Tea" 
+                           target="_blank" 
+                           class="bg-azbo-green hover:bg-azbo-green-light text-white text-xs font-semibold px-4 py-2 rounded-full transition" data-i18n="btn_order">
+                            Order
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Item 4: Pucuk Hening Green Tea -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-azbo-sand shadow-sm hover:shadow-md transition flex flex-col justify-between group">
+                    <div class="relative h-56 bg-stone-50 overflow-hidden flex items-center justify-center p-4">
+                        <img src="images/prod_tea_green.jpg" alt="Pucuk Hening Green Tea" class="h-full object-contain group-hover:scale-105 transition duration-300">
+                    </div>
+                    <div class="p-6">
+                        <div class="text-[11px] font-bold text-emerald-700 uppercase tracking-wider mb-1">Pucuk Hening Series</div>
+                        <h3 class="text-xl font-heading font-bold text-azbo-charcoal">Artisan Green Tea</h3>
+                        <span class="inline-block bg-emerald-50 text-emerald-800 text-[11px] px-2.5 py-0.5 rounded-full font-semibold mt-1">Rich Antioxidant</span>
+                        <div class="text-xs text-gray-500 mt-3 space-y-1">
+                            <div>🌱 <strong>Notes:</strong> Spring Grass, Floral, Umami</div>
+                            <div>🍃 <strong>Profile:</strong> Refreshing & Mindful Clarity</div>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0 border-t border-gray-100 flex items-center justify-between mt-2">
+                        <div>
+                            <span class="text-xs text-gray-400 block" data-i18n="price_from">Starts from</span>
+                            <span class="font-bold text-azbo-green text-sm">IDR 65,000 / $4.20</span>
+                        </div>
+                        <a href="https://wa.me/62816652714?text=Hello,%20I%20would%20like%20to%20order%20Pucuk%20Hening%20Green%20Tea" 
+                           target="_blank" 
+                           class="bg-azbo-green hover:bg-azbo-green-light text-white text-xs font-semibold px-4 py-2 rounded-full transition" data-i18n="btn_order">
+                            Order
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STORY & SOCIAL IMPACT WITH REAL FARMER IMAGES -->
+    <section id="cerita" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span class="text-xs uppercase tracking-widest text-azbo-coffee font-bold" data-i18n="story_tag">About Azbology</span>
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-azbo-green mt-2 mb-6 leading-tight" data-i18n="story_title">
+                        Born from Farmers' Need, Growing with Coffee Lovers
+                    </h2>
+                    <div class="space-y-4 text-gray-600 text-sm leading-relaxed" data-i18n="story_content">
+                        <p>
+                            It all began with local farmers needing a fair market for their harvests to support their families and educate their children. We stepped in to transform community harvests into high-value specialty products.
+                        </p>
+                        <p>
+                            Indonesia is the world's 4th largest coffee producer, yet many smallholders remain disconnected from ethical trade. AZBO initiative bridges this gap by managing natural treasures in a halal, thayyib, and sustainable manner.
+                        </p>
+                        <p>
+                            Through <strong>AZBOLOGY</strong> and <strong>Pucuk Hening</strong>, every cup you enjoy carries the blessing and livelihood of our partner farmers across Temanggung and Kalibening.
+                        </p>
+                    </div>
+                    
+                    <div class="mt-8 grid grid-cols-2 gap-4">
+                        <img src="images/img_p4_1.jpeg" alt="Petani Kopi Temanggung" class="rounded-2xl h-44 w-full object-cover shadow-sm">
+                        <img src="images/img_p10_1.jpeg" alt="Proses Pascapanen Kopi" class="rounded-2xl h-44 w-full object-cover shadow-sm">
+                    </div>
+                </div>
+                
+                <div class="bg-azbo-sand p-8 rounded-3xl border border-azbo-ochre/30 space-y-6">
+                    <h3 class="text-2xl font-heading font-bold text-azbo-green" data-i18n="journey_title">Our Coffee Journey</h3>
+                    <div class="space-y-4 text-sm">
+                        <div class="flex items-start gap-4">
+                            <span class="w-8 h-8 rounded-full bg-azbo-green text-white flex items-center justify-center font-bold text-xs shrink-0">1</span>
+                            <div>
+                                <h4 class="font-bold text-azbo-charcoal" data-i18n="step1_title">Nurseries & Care</h4>
+                                <p class="text-gray-600 text-xs mt-0.5" data-i18n="step1_desc">Direct on-field assistance to maintain natural volcanic soil fertility.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <span class="w-8 h-8 rounded-full bg-azbo-green text-white flex items-center justify-center font-bold text-xs shrink-0">2</span>
+                            <div>
+                                <h4 class="font-bold text-azbo-charcoal" data-i18n="step2_title">Red Cherry Harvest & Post-Harvest</h4>
+                                <p class="text-gray-600 text-xs mt-0.5" data-i18n="step2_desc">Only ripe cherries are picked, then processed with strict hygiene standards.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <span class="w-8 h-8 rounded-full bg-azbo-green text-white flex items-center justify-center font-bold text-xs shrink-0">3</span>
+                            <div>
+                                <h4 class="font-bold text-azbo-charcoal" data-i18n="step3_title">Precision Roasting to Cup</h4>
+                                <p class="text-gray-600 text-xs mt-0.5" data-i18n="step3_desc">Carefully tailored roasting curves to highlight each origin's authentic notes.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="pt-4 border-t border-azbo-ochre/20">
+                        <img src="images/img_p15_1.jpeg" alt="Biji Kopi Roasting" class="rounded-xl h-36 w-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PANDUAN SEDUH (BREWING GUIDE) -->
+    <section id="seduh" class="py-16 bg-azbo-cream border-t border-azbo-sand">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-4xl font-heading font-bold text-azbo-green" data-i18n="brew_title">Home Brewing Guide</h2>
+                <p class="text-gray-600 text-sm mt-2" data-i18n="brew_subtitle">Extract optimal aroma and flavor notes from every brew.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Panduan Kopi V60 -->
+                <div class="bg-white p-8 rounded-2xl border border-azbo-sand shadow-sm">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="text-2xl">☕</span>
+                        <h3 class="text-2xl font-heading font-bold text-azbo-coffee" data-i18n="brew_coffee_title">Filter Coffee (V60 Method)</h3>
+                    </div>
+                    <ul class="text-sm text-gray-600 space-y-3">
+                        <li class="flex justify-between border-b border-gray-100 pb-2">
+                            <span data-i18n="brew_coffee_dose">Coffee Dose:</span> <strong class="text-azbo-charcoal">15g (Medium Grind)</strong>
+                        </li>
+                        <li class="flex justify-between border-b border-gray-100 pb-2">
+                            <span data-i18n="brew_coffee_water">Water Volume:</span> <strong class="text-azbo-charcoal">225ml (1:15 Ratio)</strong>
+                        </li>
+                        <li class="flex justify-between border-b border-gray-100 pb-2">
+                            <span data-i18n="brew_coffee_temp">Water Temp:</span> <strong class="text-azbo-charcoal">90°C - 92°C</strong>
+                        </li>
+                        <li class="flex justify-between">
+                            <span data-i18n="brew_coffee_time">Brew Time:</span> <strong class="text-azbo-charcoal">2m 30s</strong>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Panduan Teh Artisan -->
+                <div class="bg-white p-8 rounded-2xl border border-azbo-sand shadow-sm">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="text-2xl">🍃</span>
+                        <h3 class="text-2xl font-heading font-bold text-azbo-green" data-i18n="brew_tea_title">Steeping Pucuk Hening Tea</h3>
+                    </div>
+                    <ul class="text-sm text-gray-600 space-y-3">
+                        <li class="flex justify-between border-b border-gray-100 pb-2">
+                            <span data-i18n="brew_tea_dose">Tea Leaves:</span> <strong class="text-azbo-charcoal">2 - 3g (Loose Leaf)</strong>
+                        </li>
+                        <li class="flex justify-between border-b border-gray-100 pb-2">
+                            <span data-i18n="brew_tea_water">Water Volume:</span> <strong class="text-azbo-charcoal">200ml</strong>
+                        </li>
+                        <li class="flex justify-between border-b border-gray-100 pb-2">
+                            <span data-i18n="brew_tea_temp">Water Temp:</span> <strong class="text-azbo-charcoal">75°C - 80°C (Green) / 90°C (Black)</strong>
+                        </li>
+                        <li class="flex justify-between">
+                            <span data-i18n="brew_tea_time">Steeping Time:</span> <strong class="text-azbo-charcoal">2 - 3 Mins (Re-steep 2-3x)</strong>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- B2B / WHOLESALE SECTION -->
+    <section id="b2b" class="py-16 bg-azbo-green text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-heading font-bold mb-4" data-i18n="b2b_title">Coffee & Tea Supply for Your Business</h2>
+            <p class="text-stone-300 text-sm max-w-2xl mx-auto mb-8 leading-relaxed" data-i18n="b2b_desc">
+                We supply consistent roasted coffee beans for cafes, premium artisan tea for fine dining & hotels, and customized corporate gift hampers worldwide.
+            </p>
+            <a href="https://wa.me/62816652714?text=Hello%20Azbology,%20I%20am%20interested%20in%20B2B%20/%20Export%20partnership" 
+               target="_blank" 
+               class="inline-block bg-azbo-ochre text-azbo-charcoal text-xs uppercase tracking-widest font-bold px-8 py-4 rounded-full hover:bg-amber-400 transition shadow-md" data-i18n="b2b_btn">
+                B2B & Export Inquiry
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-azbo-charcoal text-stone-400 py-12 border-t border-stone-800 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="space-y-3">
+                <div class="text-2xl font-heading font-bold text-white tracking-wider">AZBOLOGY</div>
+                <p class="text-xs leading-relaxed text-stone-400" data-i18n="footer_about">
+                    Indonesian single origin coffee and artisan tea line under the local initiative of AZBO Group.
+                </p>
+            </div>
+
+            <div>
+                <h4 class="font-bold text-white text-xs uppercase tracking-wider mb-3" data-i18n="footer_nav">Navigation</h4>
+                <ul class="space-y-2 text-xs">
+                    <li><a href="#katalog" class="hover:text-white transition" data-i18n="nav_coffee">Coffee Catalog</a></li>
+                    <li><a href="#pucuk-hening" class="hover:text-white transition" data-i18n="nav_tea">Pucuk Hening Tea</a></li>
+                    <li><a href="#cerita" class="hover:text-white transition" data-i18n="nav_story">Our Story</a></li>
+                    <li><a href="#b2b" class="hover:text-white transition" data-i18n="nav_b2b">Wholesale & Export</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-bold text-white text-xs uppercase tracking-wider mb-3" data-i18n="footer_contact">Contact & Location</h4>
+                <p class="text-xs leading-relaxed text-stone-400 mb-2">
+                    Jl. Godean Km 11.5 Berjo Wetan, Sidoluhur, Godean, Sleman, D.I. Yogyakarta, Indonesia
+                </p>
+                <p class="text-xs text-stone-400">WhatsApp: +62 816 652 714</p>
+                <p class="text-xs text-stone-400">Email: azaleabotanicals@gmail.com</p>
+            </div>
+
+            <div>
+                <h4 class="font-bold text-white text-xs uppercase tracking-wider mb-3" data-i18n="footer_social">Social Media</h4>
+                <ul class="space-y-2 text-xs">
+                    <li><a href="#" class="hover:text-white transition">Instagram: @kopiazbology</a></li>
+                    <li><a href="#" class="hover:text-white transition">Instagram: @azbology</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 mt-8 pt-8 border-t border-stone-800 text-center text-xs text-stone-500">
+            &copy; 2026 AZBOLOGY (AZBO Group). All Rights Reserved.
+        </div>
+    </footer>
+
+    <!-- MULTI-LANGUAGE SCRIPT (EN, ZH, ID) -->
+    <script>
+        const translations = {
+            en: {
+                topbar_tagline: "Worldwide & Domestic Shipping • Halal & Ethical Sourcing",
+                topbar_b2b: "B2B & Global Export",
+                nav_coffee: "Coffee Catalog",
+                nav_tea: "Pucuk Hening Tea",
+                nav_story: "Our Story",
+                nav_brew: "Brewing Guide",
+                nav_b2b: "Wholesale & Export",
+                nav_cta: "Order via WhatsApp",
+                hero_badge: "Single Origin • Red Cherry Harvest • Farm to Cup",
+                hero_title: "From Indonesia, For a Cup of World Spirit",
+                hero_subtitle: "Connecting the volcanic soils of Mount Sindoro, Sumbing, and Kalibening highland farmers directly to your cup. Managed with honesty, halal values, and sustainability.",
+                hero_btn_coffee: "☕ Explore Coffee Collection",
+                hero_btn_tea: "🍃 Discover Pucuk Hening Tea",
+                pillar1_title: "Transparent Origin",
+                pillar1_desc: "Direct partnerships with highland farmers in Temanggung and Kalibening. Full traceability for every bean and leaf.",
+                pillar2_title: "Standardized Process",
+                pillar2_desc: "Strict red-cherry picking, controlled fermentation, hygienic solar drying, and precision roasting profile.",
+                pillar3_title: "Sustainable Impact",
+                pillar3_desc: "Ensuring added value flows directly back to empower local farming families and sustain natural agroforestry.",
+                card_coffee_tag: "Indonesian Single Origin",
+                card_coffee_desc: "Honest highland flavors from Mount Sindoro, Sumbing, and Kalibening. Crafted from farm to cup.",
+                card_coffee_btn: "View All Coffee Offerings",
+                card_tea_tag: "Artisan Indonesian Tea",
+                card_tea_desc: "“The finest taste born from serenity.” Premium bud & two leaves standard for mindful tea moments.",
+                card_tea_btn: "Explore Artisan Tea",
+                catalog_title: "Featured Collection",
+                catalog_subtitle: "Freshly roasted and carefully packed for the perfect cup.",
+                price_from: "Starts from",
+                btn_order: "Order",
+                story_tag: "About Azbology",
+                story_title: "Born from Farmers' Need, Growing with Coffee Lovers",
+                story_content: `<p>It all began with local farmers needing a fair market for their harvests to support their families and educate their children. We stepped in to transform community harvests into high-value specialty products.</p><p>Indonesia is the world's 4th largest coffee producer, yet many smallholders remain disconnected from ethical trade. AZBO initiative bridges this gap by managing natural treasures in a halal, thayyib, and sustainable manner.</p><p>Through <strong>AZBOLOGY</strong> and <strong>Pucuk Hening</strong>, every cup you enjoy carries the blessing and livelihood of our partner farmers across Temanggung and Kalibening.</p>`,
+                journey_title: "Our Coffee Journey",
+                step1_title: "Nurseries & Care",
+                step1_desc: "Direct on-field assistance to maintain natural volcanic soil fertility.",
+                step2_title: "Red Cherry Harvest & Post-Harvest",
+                step2_desc: "Only ripe cherries are picked, then processed with strict hygiene standards.",
+                step3_title: "Precision Roasting to Cup",
+                step3_desc: "Carefully tailored roasting curves to highlight each origin's authentic notes.",
+                brew_title: "Home Brewing Guide",
+                brew_subtitle: "Extract optimal aroma and flavor notes from every brew.",
+                brew_coffee_title: "Filter Coffee (V60 Method)",
+                brew_coffee_dose: "Coffee Dose:",
+                brew_coffee_water: "Water Volume:",
+                brew_coffee_temp: "Water Temp:",
+                brew_coffee_time: "Brew Time:",
+                brew_tea_title: "Steeping Pucuk Hening Tea",
+                brew_tea_dose: "Tea Leaves:",
+                brew_tea_water: "Water Volume:",
+                brew_tea_temp: "Water Temp:",
+                brew_tea_time: "Steeping Time:",
+                b2b_title: "Coffee & Tea Supply for Your Business",
+                b2b_desc: "We supply consistent roasted coffee beans for cafes, premium artisan tea for fine dining & hotels, and customized corporate gift hampers worldwide.",
+                b2b_btn: "B2B & Export Inquiry",
+                footer_about: "Indonesian single origin coffee and artisan tea line under the local initiative of AZBO Group.",
+                footer_nav: "Navigation",
+                footer_contact: "Contact & Location",
+                footer_social: "Social Media"
+            },
+            zh: {
+                topbar_tagline: "全球与印尼全境配送 • 清真品质与公平贸易",
+                topbar_b2b: "B2B合作与国际出口",
+                nav_coffee: "咖啡目录",
+                nav_tea: "静芽手工茶",
+                nav_story: "品牌故事",
+                nav_brew: "冲煮指南",
+                nav_b2b: "批发与出口",
+                nav_cta: "WhatsApp即时订购",
+                hero_badge: "单一产区 • 精选全红果 • 从庄园到茶杯",
+                hero_title: "源自印尼，敬献世界的一杯精粹",
+                hero_subtitle: "将辛多罗山、松宾山火山土壤与卡利贝宁高原咖农的质朴心意，直接传递至您的杯中。以诚信、清真与可持续理念悉心打造。",
+                hero_btn_coffee: "☕ 探索精品咖啡",
+                hero_btn_tea: "🍃 领略静芽手工茶",
+                pillar1_title: "透明产源",
+                pillar1_desc: "与特满贡和卡利贝宁高原农户直接合作，确保每一颗咖啡豆与茶叶的全程可追溯性。",
+                pillar2_title: "严苛工艺",
+                pillar2_desc: "严格采摘全红果、科学发酵、卫生太阳能房干燥以及高精度烘焙曲线控制。",
+                pillar3_title: "永续发展",
+                pillar3_desc: "让产品增值收益直接反哺咖农家庭，支持农户子女教育与自然农业林业发展。",
+                card_coffee_tag: "印尼单一产区咖啡",
+                card_coffee_desc: "源自辛多罗山与卡利贝宁的纯正高原风味，庄园直达杯中。",
+                card_coffee_btn: "查看所有咖啡产品",
+                card_tea_tag: "印尼高端工匠茶",
+                card_tea_desc: "“生于宁静，方得至味。” 严格甄选一芽二叶，为静心品茗时刻而生。",
+                card_tea_btn: "探索工匠茶饮",
+                catalog_title: "精选甄品",
+                catalog_subtitle: "新鲜烘焙与精心封装，呈现最纯正的风味体验。",
+                price_from: "起售价",
+                btn_order: "订购",
+                story_tag: "关于 AZBOLOGY",
+                story_title: "始于咖农所期，伴随品味者同行",
+                story_content: `<p>一切始于当地农户希望通过公平销售收成来供养家庭与子女教育的初心。我们走进乡村，将民间原产物打造成高品质的精品之作。</p><p>印尼是世界第四大咖啡产国，但仍有众多小农未能接入公平市场。AZBO 秉持清真 (Halal)、至善 (Thayyib) 与可持续准则，承担起管理自然瑰宝的使命。</p><p>透过 <strong>AZBOLOGY</strong> 咖啡与 <strong>PUCUK HENING (静芽)</strong> 茶，您品尝的每一口，都承载着特满贡与卡利贝宁土地的滋养与咖农的美好祝愿。</p>`,
+                journey_title: "咖啡的全产业链之旅",
+                step1_title: "育苗与田间管理",
+                step1_desc: "实地指导合作农户，维护天然火山土壤的生态与肥力。",
+                step2_title: "红果采摘与后处理",
+                step2_desc: "只采摘完全成熟的鲜红果实，在严密卫生标准下进行发酵与干燥。",
+                step3_title: "精确烘焙与萃取",
+                step3_desc: "量身定制烘焙曲线，最大程度释放每个产区的独特地域风味。",
+                brew_title: "居家冲煮指南",
+                brew_subtitle: "掌握水温与比例，萃取醇香四溢的纯正风味。",
+                brew_coffee_title: "手冲滴滤咖啡 (V60)",
+                brew_coffee_dose: "咖啡粉量:",
+                brew_coffee_water: "注水总量:",
+                brew_coffee_temp: "萃取水温:",
+                brew_coffee_time: "萃取时间:",
+                brew_tea_title: "静芽工匠茶冲泡法",
+                brew_tea_dose: "投茶量:",
+                brew_tea_water: "注水量:",
+                brew_tea_temp: "适宜水温:",
+                brew_tea_time: "浸润时间:",
+                b2b_title: "为您的商业空间提供稳定供应",
+                b2b_desc: "我们为精品咖啡馆、高端餐厅与星级酒店提供稳定的单品豆与工匠茶供应，并承接企业定制礼盒。",
+                b2b_btn: "洽谈B2B与出口合作",
+                footer_about: "AZBO集团旗下印尼单一产区咖啡与手工工匠茶品牌。",
+                footer_nav: "快速导航",
+                footer_contact: "联系方式与地址",
+                footer_social: "关注我们"
+            },
+            id: {
+                topbar_tagline: "Pengiriman Seluruh Indonesia & Ekspor • Halal & Berkelanjutan",
+                topbar_b2b: "Kemitraan B2B & Horeca",
+                nav_coffee: "Katalog Kopi",
+                nav_tea: "Pucuk Hening Tea",
+                nav_story: "Cerita & Petani",
+                nav_brew: "Panduan Seduh",
+                nav_b2b: "Grosir / B2B",
+                nav_cta: "Pesan via WhatsApp",
+                hero_badge: "Single Origin • Petik Merah • Dari Hulu ke Hilir",
+                hero_title: "Dari Indonesia, Untuk Secangkir Semangat Dunia",
+                hero_subtitle: "Menghubungkan ketulusan petani di lereng pegunungan Temanggung dan Kalibening langsung ke cangkir Anda. Dikelola secara halal, thayyib, dan berkelanjutan.",
+                hero_btn_coffee: "☕ Jelajahi Koleksi Kopi",
+                hero_btn_tea: "🍃 Kenali Teh Pucuk Hening",
+                pillar1_title: "Asal yang Jelas (Transparan)",
+                pillar1_desc: "Bermitra langsung dengan petani di lereng Sindoro, Sumbing, dan Kalibening. Kami menjaga keterlacakan setiap biji kopi dan helai daun.",
+                pillar2_title: "Proses yang Terarah (Amanah)",
+                pillar2_desc: "Standar petik merah, fermentasi terkontrol, pengeringan higienis, dan roasting presisi untuk cita rasa terbaik.",
+                pillar3_title: "Dampak yang Tumbuh (Berkelanjutan)",
+                pillar3_desc: "Memastikan nilai tambah ekonomi kembali memperkuat keluarga petani lokal untuk menyekolahkan anak dan merawat kebun.",
+                card_coffee_tag: "Single Origin Indonesia",
+                card_coffee_desc: "Kopi rakyat dengan kualitas specialty dari lereng Gunung Sindoro, Sumbing, dan Kalibening Banjarnegara.",
+                card_coffee_btn: "Lihat Semua Varian Kopi",
+                card_tea_tag: "Artisan Indonesian Tea",
+                card_tea_desc: "“Rasa terbaik yang lahir dari ketenangan.” Standar pucuk daun pertama (bud & two leaves) untuk momen hening dan mindful.",
+                card_tea_btn: "Eksplorasi Teh Artisan",
+                catalog_title: "Katalog Pilihan Azbology",
+                catalog_subtitle: "Diseduh segar, dikemas higienis, siap menemani hari Anda.",
+                price_from: "Mulai dari",
+                btn_order: "Pesan",
+                story_tag: "Tentang Azbology",
+                story_title: "Lahir dari Kebutuhan Petani, Tumbuh Bersama Penikmat Kopi",
+                story_content: `<p>Berawal dari kebutuhan petani yang ingin menjual hasil panennya untuk menyekolahkan anak dan mencukupi kebutuhan rumah tangga, kami hadir untuk menampung dan mengolah kopi rakyat menjadi produk bernilai tinggi.</p><p>Indonesia adalah salah satu produsen kopi terbesar dunia, namun sebagian besar petaninya belum terhubung langsung ke pasar yang adil. AZBO hadir mengambil peran mengelola kekayaan alam ini dengan cara yang <strong>halal, thayyib, dan berkelanjutan</strong>.</p><p>Melalui lini <strong>AZBOLOGY</strong> dan teh <strong>Pucuk Hening</strong>, kami memastikan setiap cangkir yang disajikan membawa cerita kebaikan dan keberkahan dari tanah lereng Sindoro, Sumbing, hingga Kalibening.</p>`,
+                journey_title: "Perjalanan Kopi Kami",
+                step1_title: "Pembibitan & Perawatan",
+                step1_desc: "Pendampingan langsung kepada petani mitra untuk menjaga kesuburan tanah alami.",
+                step2_title: "Petik Merah & Pascapanen",
+                step2_desc: "Hanya ceri matang sempurna yang dipetik, lalu diproses dengan higienis dan terstandar.",
+                step3_title: "Roasting & Cangkir Konsumen",
+                step3_desc: "Profil sangrai presisi untuk menonjolkan karakter rasa unik tiap single origin.",
+                brew_title: "Panduan Menyeduh di Rumah",
+                brew_subtitle: "Dapatkan cita rasa dan aroma optimal dari setiap seduhan.",
+                brew_coffee_title: "Menyeduh Kopi Filter (V60)",
+                brew_coffee_dose: "Dosis Kopi:",
+                brew_coffee_water: "Volume Air:",
+                brew_coffee_temp: "Suhu Air:",
+                brew_coffee_time: "Waktu Seduh:",
+                brew_tea_title: "Menyeduh Teh Pucuk Hening",
+                brew_tea_dose: "Takaran Teh:",
+                brew_tea_water: "Volume Air:",
+                brew_tea_temp: "Suhu Air:",
+                brew_tea_time: "Waktu Seduh:",
+                b2b_title: "Pasokan Kopi & Teh untuk Bisnis Anda",
+                b2b_desc: "Kami melayani kebutuhan pasokan biji kopi kiloan untuk kedai kopi/kafe, teh artisan untuk resto & hotel, hingga custom hampers perusahaan.",
+                b2b_btn: "Konsultasi Kemitraan B2B",
+                footer_about: "Lini produk kopi single origin dan teh artisan dari inisiatif lokal AZBO Group.",
+                footer_nav: "Navigasi",
+                footer_contact: "Kontak & Lokasi",
+                footer_social: "Media Sosial"
+            }
+        };
+
+        function setLanguage(lang) {
+            if (!translations[lang]) return;
+
+            // Update DOM text
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[lang][key]) {
+                    element.innerHTML = translations[lang][key];
+                }
+            });
+
+            // Update active state on buttons
+            ['en', 'zh', 'id'].forEach(l => {
+                const btn = document.getElementById(`btn-${l}`);
+                if (l === lang) {
+                    btn.className = "px-2.5 py-0.5 rounded transition bg-azbo-ochre text-azbo-charcoal font-bold";
+                } else {
+                    btn.className = "px-2.5 py-0.5 rounded transition hover:text-azbo-ochre text-white";
+                }
+            });
+
+            // Save preference to localStorage
+            localStorage.setItem('azbology_lang', lang);
+            document.documentElement.lang = lang;
+        }
+
+        // Initialize with default or saved language (Default: English)
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('azbology_lang') || 'en';
+            setLanguage(savedLang);
+        });
+    </script>
+
+</body>
+</html>
