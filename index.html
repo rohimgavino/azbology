@@ -10,6 +10,8 @@
 <meta name="theme-color" content="#0B4D2E">
 <link rel="icon" type="image/png" href="assets/cup-icon-green.png">
 
+<link rel="preload" as="image" href="assets/hero-landscape.webp" fetchpriority="high">
+
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="AZBO / AZBOLOGY – Company Profile &amp; AZBOLOGY Coffee Catalogue">
@@ -18,6 +20,22 @@
 <meta property="og:image" content="https://azbology.id/assets/og-v2.png">
 <meta property="og:url" content="https://azbology.id/">
 <link rel="canonical" href="https://azbology.id/">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "AZBO / AZBOLOGY",
+  "url": "https://azbology.id/",
+  "logo": "https://azbology.id/assets/logo-white.png",
+  "email": "azaleabotanicals@gmail.com",
+  "telephone": "+62816652714",
+  "sameAs": [
+    "https://www.instagram.com/azbology/",
+    "https://www.tiktok.com/@kopiazbology"
+  ]
+}
+</script>
 
 <!-- ================= FONT ================= -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,7 +49,7 @@
 :root{
   --green-900:#0B4D2E;
   --green-700:#0E7A4F;
-  --sage:#6B9080;
+  --sage:#567767;
   --sage-light:#A9C2B5;
   --cream:#FFFDE7;
   --cream-2:#F6F1C9;
@@ -126,8 +144,8 @@ section{padding:clamp(64px,9vw,110px) 0;position:relative}
 @media (max-width:980px){
   .burger{display:block}
   .menu{position:fixed;top:var(--nav-h);left:0;right:0;flex-direction:column;background:var(--green-900);padding:12px 4%;gap:2px;
-    transform:translateY(-120%);transition:transform .35s ease;box-shadow:0 10px 20px rgba(0,0,0,.2);z-index:-1}
-  .menu.open{transform:translateY(0)}
+    visibility:hidden;transform:translateY(-120%);transition:transform .35s ease;box-shadow:0 10px 20px rgba(0,0,0,.2);z-index:-1}
+  .menu.open{visibility:visible;transform:translateY(0)}
   .menu a{padding:12px 14px;border-radius:10px}
   .nav{background:rgba(11,77,46,.96)}
 }
@@ -149,6 +167,10 @@ section{padding:clamp(64px,9vw,110px) 0;position:relative}
   .hero .pills{display:flex;flex-direction:column;border-radius:14px;padding:8px 16px;gap:4px;font-size:.84rem}
   .hero .pills span[aria-hidden="true"]{display:none}
 }
+.inquiry-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:26px}
+.inquiry-button{display:inline-block;padding:11px 22px;border-radius:999px;background:var(--green-900);color:var(--cream);border:1px solid var(--cream);font-weight:700;text-decoration:none}
+.hero .inquiry-button{background:var(--cream);color:var(--green-900)}
+.product-body .inquiry-actions{justify-content:flex-start}
 .scroll-cue{display:inline-block;margin-top:46px;width:28px;height:46px;border:2px solid var(--cream);border-radius:20px;position:relative}
 .scroll-cue::after{content:"";position:absolute;left:50%;top:8px;width:4px;height:8px;background:var(--cream);border-radius:4px;transform:translateX(-50%);animation:cue 1.6s infinite}
 @keyframes cue{0%{opacity:1;top:8px}100%{opacity:0;top:26px}}
@@ -310,11 +332,12 @@ footer{background:#073620;color:var(--sage-light);text-align:center;padding:22px
 /* =========================================================
    7. SCROLL ANIMATION
    ========================================================= */
-.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease}
+.reveal{opacity:1;transform:none;transition:opacity .8s ease,transform .8s ease}
+.reveal.pending{opacity:0;transform:translateY(28px)}
 .reveal.visible{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
-  .reveal{opacity:1;transform:none;transition:none}
+  .reveal,.reveal.pending{opacity:1;transform:none;transition:none}
   .scroll-cue::after{animation:none}
 }
 :focus-visible{outline:3px solid #FFD54F;outline-offset:3px}
@@ -357,7 +380,7 @@ footer{background:#073620;color:var(--sage-light);text-align:center;padding:22px
 <header class="nav" id="nav">
   <div class="container">
     <a href="#home" class="brand" aria-label="AZBO – back to top">
-      <img src="assets/logo-white.png" alt="AZBO logo" class="brand-logo">
+      <img src="assets/logo-white.png" alt="AZBO logo" class="brand-logo" width="1132" height="400">
     </a>
     <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span></button>
     <nav aria-label="Main navigation">
@@ -384,12 +407,13 @@ footer{background:#073620;color:var(--sage-light);text-align:center;padding:22px
   <div class="ph overlay-photo has-img" role="img" aria-label="Farmer holding freshly picked coffee cherries in a highland coffee plantation" style="background-image:url('assets/hero-landscape.webp')"></div>
   <div class="container overlay-content">
     <div class="reveal" style="display:flex;flex-direction:column;align-items:center">
-      <img src="assets/cup-icon-white.png" alt="AZBO mark" class="hero-icon">
-      <img src="assets/logo-white.png" alt="AZBO logo" class="hero-logo">
+      <img src="assets/cup-icon-white.png" alt="AZBO mark" class="hero-icon" width="400" height="400">
+      <img src="assets/logo-white.png" alt="AZBO logo" class="hero-logo" width="1132" height="400">
     </div>
     <h1 class="reveal"><small>COMPANY PROFILE &amp;</small>AZBOLOGY COFFEE CATALOGUE</h1>
     <p class="tagline reveal">From Indonesia, A Cup of Spark for the World</p>
     <p class="pills reveal"><span>Single origin Indonesia</span><span aria-hidden="true">•</span><span>Red-cherry picked</span><span aria-hidden="true">•</span><span>From farm to cup</span></p>
+    <div class="inquiry-actions"><a class="inquiry-button" href="https://wa.me/62816652714?text=Hello%20AZBO%2C%20I%20would%20like%20to%20ask%20about%20samples%20for%20AZBO%20coffee%20and%20herbal%20spices.%20Product%20%2F%20bean%20form%3A%20%5Bplease%20specify%5D.%20Quantity%3A%20%5Bplease%20specify%5D.%20Destination%20country%3A%20%5Bplease%20specify%5D.%20Please%20confirm%20availability%20and%20details." target="_blank" rel="noopener">Request Samples</a><a class="inquiry-button" href="https://wa.me/62816652714?text=Hello%20AZBO%2C%20I%20would%20like%20to%20request%20a%20quotation%20for%20AZBO%20coffee%20and%20herbal%20spices.%20Product%20%2F%20bean%20form%3A%20%5Bplease%20specify%5D.%20Quantity%3A%20%5Bplease%20specify%5D.%20Destination%20country%3A%20%5Bplease%20specify%5D.%20Please%20confirm%20availability%20and%20details." target="_blank" rel="noopener">Request Quote</a></div>
     <div><a href="#profile" class="scroll-cue" aria-label="Scroll down"></a></div>
   </div>
 </section>
@@ -546,6 +570,7 @@ footer{background:#073620;color:var(--sage-light);text-align:center;padding:22px
 <section class="bg-cream-2" id="catalogue">
   <div class="container">
     <h2 class="reveal center" style="color:var(--green-900)">AZBOLOGY CATALOGUE</h2>
+    <p class="center" style="margin-top:18px"><a href="#tea-spices" style="color:var(--green-900);font-weight:700">Explore Herbal Spices</a></p>
 
     <!-- ROBUSTA -->
     <div class="cat-group">
@@ -670,6 +695,7 @@ footer{background:#073620;color:var(--sage-light);text-align:center;padding:22px
               <dt>Body</dt><dd>Full-bodied, thick, and coating</dd>
             </dl>
             <div class="brew"><strong>Brewing Recommendation :</strong>Best suited for Vietnam Drip, Moka Pot, or Espresso Machine to produce a strong, concentrated cup.</div>
+            <div class="inquiry-actions"><a class="inquiry-button" href="https://wa.me/62816652714?text=Hello%20AZBO%2C%20I%20would%20like%20to%20ask%20about%20samples%20for%20TEMANGGUNG%20FINE%20COFFEE.%20Product%20%2F%20bean%20form%3A%20%5Bplease%20specify%5D.%20Quantity%3A%20%5Bplease%20specify%5D.%20Destination%20country%3A%20%5Bplease%20specify%5D.%20Please%20confirm%20availability%20and%20details." target="_blank" rel="noopener">Request Samples</a><a class="inquiry-button" href="https://wa.me/62816652714?text=Hello%20AZBO%2C%20I%20would%20like%20to%20request%20a%20quotation%20for%20TEMANGGUNG%20FINE%20COFFEE.%20Product%20%2F%20bean%20form%3A%20%5Bplease%20specify%5D.%20Quantity%3A%20%5Bplease%20specify%5D.%20Destination%20country%3A%20%5Bplease%20specify%5D.%20Please%20confirm%20availability%20and%20details." target="_blank" rel="noopener">Request Quote</a></div>
           </div>
         </article>
         <!-- b) Temanggung Fine Coffee Anaerob Process -->
@@ -689,6 +715,7 @@ footer{background:#073620;color:var(--sage-light);text-align:center;padding:22px
               <dt>Body</dt><dd>Heavy and creamy, long-lasting on the palate</dd>
             </dl>
             <div class="brew"><strong>Brewing Recommendation :</strong>Best suited for Vietnam Drip, Moka Pot, or Espresso Machine to produce a strong, concentrated cup.</div>
+            <div class="inquiry-actions"><a class="inquiry-button" href="https://wa.me/62816652714?text=Hello%20AZBO%2C%20I%20would%20like%20to%20ask%20about%20samples%20for%20TEMANGGUNG%20FINE%20COFFEE%20ANAEROB%20PROCESS.%20Product%20%2F%20bean%20form%3A%20%5Bplease%20specify%5D.%20Quantity%3A%20%5Bplease%20specify%5D.%20Destination%20country%3A%20%5Bplease%20specify%5D.%20Please%20confirm%20availability%20and%20details." target="_blank" rel="noopener">Request Samples</a><a class="inquiry-button" href="https://wa.me/62816652714?text=Hello%20AZBO%2C%20I%20would%20like%20to%20request%20a%20quotation%20for%20TEMANGGUNG%20FINE%20COFFEE%20ANAEROB%20PROCESS.%20Product%20%2F%20bean%20form%3A%20%5Bplease%20specify%5D.%20Quantity%3A%20%5Bplease%20specify%5D.%20Destination%20country%3A%20%5Bplease%20specify%5D.%20Please%20confirm%20availability%20and%20details." target="_blank" rel="noopener">Request Quote</a></div>
           </div>
         </article>
       </div>
@@ -716,6 +743,7 @@ footer{background:#073620;color:var(--sage-light);text-align:center;padding:22px
               <dt>Body</dt><dd>Medium, silky and smooth</dd>
             </dl>
             <div class="brew"><strong>Brewing Recommendation :</strong>Optimally brewed with V60, Kalita, Aeropress, or Cold Brew to bring out its acidity and fruit nuances.</div>
+            <div class="inquiry-actions"><a class="inquiry-button" href="https://wa.me/62816652714?text=Hello%20AZBO%2C%20I%20would%20like%20to%20ask%20about%20samples%20for%20KALIBENING%20SPECIALITY%20COFFEE%20NATURAL%20PROCESS.%20Product%20%2F%20bean%20form%3A%20%5Bplease%20specify%5D.%20Quantity%3A%20%5Bplease%20specify%5D.%20Destination%20country%3A%20%5Bplease%20specify%5D.%20Please%20confirm%20availability%20and%20details." target="_blank" rel="noopener">Request Samples</a><a class="inquiry-button" href="https://wa.me/62816652714?text=Hello%20AZBO%2C%20I%20would%20like%20to%20request%20a%20quotation%20for%20KALIBENING%20SPECIALITY%20COFFEE%20NATURAL%20PROCESS.%20Product%20%2F%20bean%20form%3A%20%5Bplease%20specify%5D.%20Quantity%3A%20%5Bplease%20specify%5D.%20Destination%20country%3A%20%5Bplease%20specify%5D.%20Please%20confirm%20availability%20and%20details." target="_blank" rel="noopener">Request Quote</a></div>
           </div>
         </article>
         <!-- d) Kalibening Full Wash Process -->
@@ -735,6 +763,7 @@ footer{background:#073620;color:var(--sage-light);text-align:center;padding:22px
               <dt>Body</dt><dd>Light to medium, clean finish</dd>
             </dl>
             <div class="brew"><strong>Brewing Recommendation :</strong>Ideally brewed with a Filter (V60/Chemex) or Syphon for clarity of flavor and balanced aroma.</div>
+            <div class="inquiry-actions"><a class="inquiry-button" href="https://wa.me/62816652714?text=Hello%20AZBO%2C%20I%20would%20like%20to%20ask%20about%20samples%20for%20KALIBENING%20SPECIALITY%20COFFEE%20FULL%20WASH%20PROCESS.%20Product%20%2F%20bean%20form%3A%20%5Bplease%20specify%5D.%20Quantity%3A%20%5Bplease%20specify%5D.%20Destination%20country%3A%20%5Bplease%20specify%5D.%20Please%20confirm%20availability%20and%20details." target="_blank" rel="noopener">Request Samples</a><a class="inquiry-button" href="https://wa.me/62816652714?text=Hello%20AZBO%2C%20I%20would%20like%20to%20request%20a%20quotation%20for%20KALIBENING%20SPECIALITY%20COFFEE%20FULL%20WASH%20PROCESS.%20Product%20%2F%20bean%20form%3A%20%5Bplease%20specify%5D.%20Quantity%3A%20%5Bplease%20specify%5D.%20Destination%20country%3A%20%5Bplease%20specify%5D.%20Please%20confirm%20availability%20and%20details." target="_blank" rel="noopener">Request Quote</a></div>
           </div>
         </article>
       </div>
@@ -762,6 +791,7 @@ footer{background:#073620;color:var(--sage-light);text-align:center;padding:22px
               <dt>Body</dt><dd>Medium to full-bodied, round and pleasant on the palate</dd>
             </dl>
             <div class="brew"><strong>Brewing Recommendation :</strong>Best brewed with Vietnam Drip, Moka Pot, Espresso, or French Press. Ideal for daily coffee drinkers who want a strong yet smooth cup.</div>
+            <div class="inquiry-actions"><a class="inquiry-button" href="https://wa.me/62816652714?text=Hello%20AZBO%2C%20I%20would%20like%20to%20ask%20about%20samples%20for%20BLEND%20ROASTED%20COFFEE%20ARABICA%2030%25%20%2B%20ROBUSTA%2070%25.%20Product%20%2F%20bean%20form%3A%20%5Bplease%20specify%5D.%20Quantity%3A%20%5Bplease%20specify%5D.%20Destination%20country%3A%20%5Bplease%20specify%5D.%20Please%20confirm%20availability%20and%20details." target="_blank" rel="noopener">Request Samples</a><a class="inquiry-button" href="https://wa.me/62816652714?text=Hello%20AZBO%2C%20I%20would%20like%20to%20request%20a%20quotation%20for%20BLEND%20ROASTED%20COFFEE%20ARABICA%2030%25%20%2B%20ROBUSTA%2070%25.%20Product%20%2F%20bean%20form%3A%20%5Bplease%20specify%5D.%20Quantity%3A%20%5Bplease%20specify%5D.%20Destination%20country%3A%20%5Bplease%20specify%5D.%20Please%20confirm%20availability%20and%20details." target="_blank" rel="noopener">Request Quote</a></div>
           </div>
         </article>
       </div>
@@ -792,6 +822,47 @@ footer{background:#073620;color:var(--sage-light);text-align:center;padding:22px
         <p>Philosophy: Pucuk (the first leaf shoot), the highest quality (bud &amp; two-leaves standard). Hening : stillness, mindfulness, refinement, spiritual clarity.</p>
         <blockquote class="tea-quote">"The Finest Flavor Rooted in Stillness”</blockquote>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- Additive catalogue items from AZBO - CATALOG TEA&SPICES (rev), page 2. -->
+<section class="bg-cream" id="tea-spices" aria-labelledby="spices-title">
+  <div class="container">
+    <span class="eyebrow">AZBO TEA &amp; HERBAL SPICE COLLECTION</span>
+    <h2 id="spices-title" style="color:var(--green-900);margin-bottom:18px">AUTHENTIC HERBAL SPICES</h2>
+    <p class="lead" style="max-width:65ch;margin-bottom:32px">Explore the pepper collection from our tea and herbal spice catalogue. Please contact AZBO to confirm current availability and request a quotation.</p>
+    <div class="prod-grid">
+      <article class="product" id="black-white-pepper">
+        <div class="product-head"><h3>Black &amp; White Pepper</h3></div>
+        <figure>
+          <img src="assets/black-white-pepper.webp" alt="Dark whole peppercorns pictured in the catalogue's Black and White Pepper entry" width="1200" height="800" loading="lazy" style="width:100%;height:auto">
+          <figcaption style="padding:10px 28px;font-size:.9rem">Catalogue photo shows black peppercorns; white pepper is listed but not separately pictured.</figcaption>
+        </figure>
+        <div class="product-body">
+          <dl class="notes">
+            <dt>Flavor &amp; Aroma</dt><dd>Bold, sharp heat (Black) and clean, refined warmth (White), with a rich natural spice aroma.</dd>
+            <dt>Usage</dt><dd>Premium culinary seasoning, herbal formulations, B2B food industry and export.</dd>
+            <dt>Form</dt><dd>Whole peppercorns.</dd>
+          </dl>
+          <div class="brew"><a href="https://wa.me/62816652714?text=Hello%20AZBO%2C%20please%20confirm%20availability%20and%20provide%20a%20quotation%20for%20Black%20%26%20White%20Pepper.%20Quantity%3A%20%5Bplease%20specify%5D.%20Destination%20country%3A%20%5Bplease%20specify%5D." target="_blank" rel="noopener" style="font-weight:700;color:var(--green-900)">Request Black &amp; White Pepper Quote</a></div>
+        </div>
+      </article>
+      <article class="product" id="cubeb-pepper">
+        <div class="product-head"><h3>Cubeb Pepper</h3></div>
+        <figure>
+          <img src="assets/cubeb-pepper.webp" alt="Whole cubeb peppercorns with visible tails in and around a wooden spoon" width="900" height="600" loading="lazy" style="width:100%;height:auto">
+          <figcaption style="padding:10px 28px;font-size:.9rem">Whole tailed peppercorns, as pictured in the catalogue.</figcaption>
+        </figure>
+        <div class="product-body">
+          <dl class="notes">
+            <dt>Flavor &amp; Aroma</dt><dd>Distinctive warm spice, peppery-citrus, with subtle notes of pine and wood.</dd>
+            <dt>Usage</dt><dd>Traditional herbal blends, authentic spice mixes and essential oil extraction.</dd>
+            <dt>Form</dt><dd>Whole tailed peppercorns.</dd>
+          </dl>
+          <div class="brew"><a href="https://wa.me/62816652714?text=Hello%20AZBO%2C%20please%20confirm%20availability%20and%20provide%20a%20quotation%20for%20Cubeb%20Pepper.%20Quantity%3A%20%5Bplease%20specify%5D.%20Destination%20country%3A%20%5Bplease%20specify%5D." target="_blank" rel="noopener" style="font-weight:700;color:var(--green-900)">Request Cubeb Pepper Quote</a></div>
+        </div>
+      </article>
     </div>
   </div>
 </section>
@@ -846,7 +917,7 @@ footer{background:#073620;color:var(--sage-light);text-align:center;padding:22px
   <div class="ph overlay-photo has-img" role="img" aria-label="Green highland landscape of Indonesia" style="background-image:url('assets/cover-farm.webp')"></div>
   <div class="container overlay-content contact-grid">
     <div class="reveal">
-      <img src="assets/logo-white.png" alt="AZBO logo" class="contact-logo">
+      <img src="assets/logo-white.png" alt="AZBO logo" class="contact-logo" width="1132" height="400" loading="lazy" decoding="async">
       <h2>Let's Nurture Stories from the Soils of Indonesia</h2>
     </div>
     <address class="reveal" style="font-style:normal">
@@ -896,15 +967,33 @@ footer{background:#073620;color:var(--sage-light);text-align:center;padding:22px
   onScroll();
   window.addEventListener('scroll', onScroll, {passive:true});
 
-  // Mobile menu toggle
-  const closeMenu = () => { menu.classList.remove('open'); burger.setAttribute('aria-expanded','false'); burger.setAttribute('aria-label','Open menu'); };
+  // Closed mobile navigation must not receive keyboard focus.
+  const mobile = window.matchMedia('(max-width:980px)');
+  const syncMenu = () => { menu.inert = mobile.matches && !menu.classList.contains('open'); };
+  const closeMenu = () => {
+    menu.classList.remove('open');
+    burger.setAttribute('aria-expanded','false');
+    burger.setAttribute('aria-label','Open menu');
+    syncMenu();
+  };
+  syncMenu();
+  mobile.addEventListener('change', closeMenu);
   burger.addEventListener('click', () => {
     const open = menu.classList.toggle('open');
-    burger.setAttribute('aria-expanded', open);
+    burger.setAttribute('aria-expanded', String(open));
     burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    syncMenu();
   });
   links.forEach(a => a.addEventListener('click', closeMenu));
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && mobile.matches && menu.classList.contains('open')) {
+      closeMenu();
+      burger.focus();
+    }
+  });
+
+  // Content stays visible when scroll observation is unsupported.
+  if (typeof IntersectionObserver !== 'function') return;
 
   // Active menu link based on visible section
   const map = {};
@@ -922,10 +1011,13 @@ footer{background:#073620;color:var(--sage-light);text-align:center;padding:22px
   // Fade-in on scroll
   const io = new IntersectionObserver((entries, obs) => {
     entries.forEach(en => {
-      if (en.isIntersecting) { en.target.classList.add('visible'); obs.unobserve(en.target); }
+      if (en.isIntersecting) { en.target.classList.remove('pending'); en.target.classList.add('visible'); obs.unobserve(en.target); }
     });
   }, {threshold:0.12, rootMargin:'0px 0px -40px 0px'});
-  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  document.querySelectorAll('.reveal').forEach(el => {
+    io.observe(el);
+    el.classList.add('pending');
+  });
 })();
 </script>
 </body>
