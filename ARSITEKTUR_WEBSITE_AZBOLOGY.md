@@ -1,4 +1,5 @@
 # 🌿 DOKUMEN ARSITEKTUR & PERENCANAAN WEBSITE AZBOLOGY
+> **Status:** rencana historis, bukan daftar fitur terimplementasi. Implementasi authoritative adalah website statis `index.html` di clone `D:/azbology3-repo` (remote `rohimgavino/azbology`, branch `main`, baseline `6e15209`, GitHub Pages). `D:/azbology3` hanya export lama dan tidak boleh dihapus/dipindahkan/ditimpa. Tidak ada migrasi framework, ecommerce, produk/klaim baru, atau perubahan desain dalam scope optimasi lokal. PDF hanya sumber internal; pemilik melarang tautan unduh katalog.
 > **Referensi Utama:** [Agradaya.id](https://www.agradaya.id/) & Materi Katalog Resmi Azbology (`D:\azbology\Katalog Kopi AZBO-2026-Agustus.pdf`).
 
 ---
@@ -85,7 +86,7 @@ graph TD
 
 ### 4.3. Halaman B2B & Grosir
 * Penjelasan skema pasokan untuk *Coffee Shop*, hotel, dan suvenir korporat.
-* Tombol unduh katalog resmi (PDF) & formulir permintaan sampel uji coba (*coffee/tea sample request*).
+* CTA permintaan sampel/quotation melalui kanal existing; **tanpa tombol/tautan unduh katalog PDF**. Form merupakan usulan, bukan fitur yang disetujui.
 
 ---
 

@@ -1,4 +1,5 @@
 # 🌿 DESIGN.md — Azbology Design System
+> **Status:** konsep historis, bukan izin redesign. Acuan desain yang disukai pemilik adalah `index.html` pada baseline `6e15209`: Barlow/Barlow Condensed, hijau/cream/sage/kraft, layout dan crop existing. Token/font/fitur usulan di bawah tidak boleh mengganti implementasi tanpa persetujuan baru. Optimasi foto harus mempertahankan tampilan tersebut.
 > **Aesthetic Archetype:** *Editorial Organic & Mindful Zen Craftsmanship*  
 > **Target Audience:** B2B Wholesale Buyers, Cafe & Hotel Operators, Global Importers, & Mindful Coffee/Tea Enthusiasts.
 

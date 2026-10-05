@@ -1,0 +1,16 @@
+# GitHub Pages/Jekyll publication exclusions; source copies stay in Git.
+exclude:
+  - scripts
+  - tests
+  - docs
+  - requirements-images.txt
+  - SOP_WEBSITE.md
+  - DESIGN.md
+  - ARSITEKTUR_WEBSITE_AZBOLOGY.md
+  - COPYWRITING_WEBSITE_AZBOLOGY.md
+  - WIREFRAME_DAN_UI_AZBOLOGY.md
+  - Katalog English AZBO-2026.pdf
+  - Katalog Kopi AZBO-2026-Agustus.pdf
+  - WhatsApp Image 2026-08-28 at 14.28.36.jpeg
+  - assets/optimized/manifest.json
+  - _reports

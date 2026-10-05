@@ -10,7 +10,7 @@
 <meta name="theme-color" content="#0B4D2E">
 <link rel="icon" type="image/png" href="assets/cup-icon-green.png">
 
-<link rel="preload" as="image" href="assets/hero-landscape.webp" fetchpriority="high">
+<link rel="preload" as="image" href="assets/optimized/hero-landscape-1667.webp" imagesrcset="assets/optimized/hero-landscape-320.webp 320w, assets/optimized/hero-landscape-640.webp 640w, assets/optimized/hero-landscape-960.webp 960w, assets/optimized/hero-landscape-1280.webp 1280w, assets/optimized/hero-landscape-1667.webp 1667w" imagesizes="(max-aspect-ratio: 1667/934) 179vh, 100vw" fetchpriority="high">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
@@ -110,6 +110,10 @@ section{padding:clamp(64px,9vw,110px) 0;position:relative}
 .ph.has-img::before{display:none}
 .ph.has-img.contain{background-color:#fff;background-size:78%}
 
+/* Native responsive photos retain the approved background geometry/crop. */
+.responsive-photo{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;object-position:center}
+.ph.has-img.contain .responsive-photo{inset:auto;width:78%;height:auto;object-fit:contain}
+
 /* Circle photo with cream border */
 .circle{border-radius:50%!important;aspect-ratio:1/1;border:8px solid var(--cream);box-shadow:var(--shadow);min-height:0}
 .circle span{font-size:.75rem}
@@ -142,7 +146,7 @@ section{padding:clamp(64px,9vw,110px) 0;position:relative}
 .burger[aria-expanded="true"] span::after{top:0;transform:rotate(-45deg)}
 
 @media (max-width:980px){
-  .burger{display:block}
+  .burger{display:block;margin-left:auto;flex:0 0 44px}
   .menu{position:fixed;top:var(--nav-h);left:0;right:0;flex-direction:column;background:var(--green-900);padding:12px 4%;gap:2px;
     visibility:hidden;transform:translateY(-120%);transition:transform .35s ease;box-shadow:0 10px 20px rgba(0,0,0,.2);z-index:-1}
   .menu.open{visibility:visible;transform:translateY(0)}
@@ -269,6 +273,7 @@ section{padding:clamp(64px,9vw,110px) 0;position:relative}
 @media (max-width:900px){
   .prod-grid{grid-template-columns:1fr}
   .prod-grid.single .product{flex-direction:column}
+  .prod-grid.single .product-head{flex-basis:auto}
 }
 @media (max-width:520px){
   .product-head{flex-direction:column;text-align:center}
@@ -404,7 +409,7 @@ footer{background:#073620;color:var(--sage-light);text-align:center;padding:22px
      1. HERO
      ========================================================= -->
 <section class="hero" id="home">
-  <div class="ph overlay-photo has-img" role="img" aria-label="Farmer holding freshly picked coffee cherries in a highland coffee plantation" style="background-image:url('assets/hero-landscape.webp')"></div>
+  <div class="ph overlay-photo has-img" role="img" aria-label="Farmer holding freshly picked coffee cherries in a highland coffee plantation" style=""><img class="responsive-photo" src="assets/optimized/hero-landscape-1667.webp" srcset="assets/optimized/hero-landscape-320.webp 320w, assets/optimized/hero-landscape-640.webp 640w, assets/optimized/hero-landscape-960.webp 960w, assets/optimized/hero-landscape-1280.webp 1280w, assets/optimized/hero-landscape-1667.webp 1667w" sizes="(max-aspect-ratio: 1667/934) 179vh, 100vw" width="1667" height="934" alt="" aria-hidden="true" loading="eager" decoding="async" fetchpriority="high"></div>
   <div class="container overlay-content">
     <div class="reveal" style="display:flex;flex-direction:column;align-items:center">
       <img src="assets/cup-icon-white.png" alt="AZBO mark" class="hero-icon" width="400" height="400">
@@ -423,7 +428,7 @@ footer{background:#073620;color:var(--sage-light);text-align:center;padding:22px
      ========================================================= -->
 <section class="bg-cream" id="profile">
   <div class="container split">
-    <div class="ph circle reveal has-img" role="img" aria-label="Coffee farmer carrying a basket of red cherries" style="background-image:url('assets/farmer.webp');background-position:center 35%"></div>
+    <div class="ph circle reveal has-img" role="img" aria-label="Coffee farmer carrying a basket of red cherries" style=""><img class="responsive-photo" src="assets/optimized/farmer-982.webp" srcset="assets/optimized/farmer-320.webp 320w, assets/optimized/farmer-640.webp 640w, assets/optimized/farmer-960.webp 960w, assets/optimized/farmer-982.webp 982w" sizes="(max-width: 820px) 92vw, 560px" width="982" height="1629" alt="" aria-hidden="true" loading="lazy" decoding="async" style="object-position:center 35%"></div>
     <div class="reveal">
       <span class="eyebrow">COMPANY PROFILE | 01</span>
       <h2 class="sr-only" style="position:absolute;left:-9999px">Company Profile</h2>
@@ -450,9 +455,9 @@ footer{background:#073620;color:var(--sage-light);text-align:center;padding:22px
         </div>
       </div>
       <div class="about-photos reveal">
-        <div class="ph has-img" role="img" aria-label="Lush green mountains of Central Java" style="background-image:url('assets/cover-farm.webp')"></div>
-        <div class="ph has-img" style="min-height:200px;background-image:url('assets/coffee-field.webp');background-position:center 40%" role="img" aria-label="Farmer harvesting coffee"></div>
-        <div class="ph has-img" style="min-height:200px;background-image:url('assets/journey-bg.webp');background-position:35% center" role="img" aria-label="Farmer hand-picking coffee cherries into a basket"></div>
+        <div class="ph has-img" role="img" aria-label="Lush green mountains of Central Java" style=""><img class="responsive-photo" src="assets/optimized/cover-farm-1687.webp" srcset="assets/optimized/cover-farm-320.webp 320w, assets/optimized/cover-farm-640.webp 640w, assets/optimized/cover-farm-960.webp 960w, assets/optimized/cover-farm-1280.webp 1280w, assets/optimized/cover-farm-1687.webp 1687w" sizes="(max-width: 820px) 92vw, 560px" width="1687" height="1124" alt="" aria-hidden="true" loading="lazy" decoding="async"></div>
+        <div class="ph has-img" style="min-height:200px;" role="img" aria-label="Farmer harvesting coffee"><img class="responsive-photo" src="assets/optimized/coffee-field-711.webp" srcset="assets/optimized/coffee-field-320.webp 320w, assets/optimized/coffee-field-640.webp 640w, assets/optimized/coffee-field-711.webp 711w" sizes="(max-width: 820px) 92vw, 560px" width="711" height="1166" alt="" aria-hidden="true" loading="lazy" decoding="async" style="object-position:center 40%"></div>
+        <div class="ph has-img" style="min-height:200px;" role="img" aria-label="Farmer hand-picking coffee cherries into a basket"><img class="responsive-photo" src="assets/optimized/journey-bg-1669.webp" srcset="assets/optimized/journey-bg-320.webp 320w, assets/optimized/journey-bg-640.webp 640w, assets/optimized/journey-bg-960.webp 960w, assets/optimized/journey-bg-1280.webp 1280w, assets/optimized/journey-bg-1669.webp 1669w" sizes="(max-width: 820px) 92vw, 560px" width="1669" height="1170" alt="" aria-hidden="true" loading="lazy" decoding="async" style="object-position:35% center"></div>
       </div>
     </div>
   </div>
@@ -478,7 +483,7 @@ footer{background:#073620;color:var(--sage-light);text-align:center;padding:22px
      5. COFFEE IS NOT JUST A DRINK
      ========================================================= -->
 <section class="on-green" style="color:var(--cream);overflow:hidden">
-  <div class="ph overlay-photo has-img" role="img" aria-label="Roasted AZBOLOGY coffee beans" style="background-image:url('assets/coffee-beans.webp')"></div>
+  <div class="ph overlay-photo has-img" role="img" aria-label="Roasted AZBOLOGY coffee beans" style=""><img class="responsive-photo" src="assets/optimized/coffee-beans-1653.webp" srcset="assets/optimized/coffee-beans-320.webp 320w, assets/optimized/coffee-beans-640.webp 640w, assets/optimized/coffee-beans-960.webp 960w, assets/optimized/coffee-beans-1280.webp 1280w, assets/optimized/coffee-beans-1653.webp 1653w" sizes="100vw" width="1653" height="1000" alt="" aria-hidden="true" loading="lazy" decoding="async"></div>
   <div class="container overlay-content center">
     <span class="eyebrow reveal">COMPANY PROFILE | 04</span>
     <h2 class="reveal" style="font-size:clamp(2.2rem,6vw,4rem)">COFFEE IS NOT JUST A DRINK</h2>
@@ -499,7 +504,7 @@ footer{background:#073620;color:var(--sage-light);text-align:center;padding:22px
         <h2 style="color:var(--green-900);margin-bottom:22px">Born from the farmer's need, grown with coffee lovers</h2>
         <p class="lead">AZBO is a local initiative that transforms smallholder coffee into a value-added product called AZBOLOGY. We select coffee from Temanggung and Kalibening, then carefully guide it through a well-managed process from farm to cup.</p>
       </div>
-      <div class="ph reveal has-img" role="img" aria-label="Farmers in the highlands of Central Java" style="background-image:url('assets/coffee-field.webp');background-position:center 45%"></div>
+      <div class="ph reveal has-img" role="img" aria-label="Farmers in the highlands of Central Java" style=""><img class="responsive-photo" src="assets/optimized/coffee-field-711.webp" srcset="assets/optimized/coffee-field-320.webp 320w, assets/optimized/coffee-field-640.webp 640w, assets/optimized/coffee-field-711.webp 711w" sizes="(max-width: 820px) 92vw, 560px" width="711" height="1166" alt="" aria-hidden="true" loading="lazy" decoding="async" style="object-position:center 45%"></div>
     </div>
     <div class="cards">
       <article class="card reveal">
@@ -530,7 +535,7 @@ footer{background:#073620;color:var(--sage-light);text-align:center;padding:22px
     <p class="lead reveal" style="margin-top:12px">Each terroir's coffee holds a different flavor and story.</p>
     <div class="regions" style="text-align:left">
       <article class="region reveal">
-        <div class="ph overlay-photo has-img" role="img" aria-label="Ripe red robusta cherries in Temanggung" style="background-image:url('assets/origin-temanggung.webp')"></div>
+        <div class="ph overlay-photo has-img" role="img" aria-label="Ripe red robusta cherries in Temanggung" style=""><img class="responsive-photo" src="assets/optimized/origin-temanggung-900.webp" srcset="assets/optimized/origin-temanggung-320.webp 320w, assets/optimized/origin-temanggung-640.webp 640w, assets/optimized/origin-temanggung-900.webp 900w" sizes="100vw" width="900" height="620" alt="" aria-hidden="true" loading="lazy" decoding="async"></div>
         <div class="overlay-content">
           <span class="tag">ROBUSTA</span>
           <h3>TEMANGGUNG</h3>
@@ -538,7 +543,7 @@ footer{background:#073620;color:var(--sage-light);text-align:center;padding:22px
         </div>
       </article>
       <article class="region reveal">
-        <div class="ph overlay-photo has-img" role="img" aria-label="Ripe arabica cherries in Kalibening" style="background-image:url('assets/origin-kalibening.webp')"></div>
+        <div class="ph overlay-photo has-img" role="img" aria-label="Ripe arabica cherries in Kalibening" style=""><img class="responsive-photo" src="assets/optimized/origin-kalibening-900.webp" srcset="assets/optimized/origin-kalibening-320.webp 320w, assets/optimized/origin-kalibening-640.webp 640w, assets/optimized/origin-kalibening-900.webp 900w" sizes="100vw" width="900" height="620" alt="" aria-hidden="true" loading="lazy" decoding="async"></div>
         <div class="overlay-content">
           <span class="tag">ARABICA</span>
           <h3>KALIBENING</h3>
@@ -557,9 +562,9 @@ footer{background:#073620;color:var(--sage-light);text-align:center;padding:22px
     <h2 class="reveal" style="color:var(--green-900);max-width:22ch;margin-inline:auto">QUALITY BEGINS WHILE THE CHERRY IS STILL ON THE TREE</h2>
     <p class="lead reveal" style="margin-top:14px">Red-cherry picking helps ensure the fruit is harvested at its peak ripeness.</p>
     <div class="gallery">
-      <div class="ph reveal has-img" role="img" aria-label="Roasted coffee beans" style="background-image:url('assets/quality-1.webp')"></div>
-      <div class="ph reveal has-img" role="img" aria-label="Hand-picking red coffee cherries" style="background-image:url('assets/quality-2.webp')"></div>
-      <div class="ph reveal has-img" role="img" aria-label="Ripe red coffee cherries on the tree" style="background-image:url('assets/quality-3.webp')"></div>
+      <div class="ph reveal has-img" role="img" aria-label="Roasted coffee beans" style=""><img class="responsive-photo" src="assets/optimized/quality-1-826.webp" srcset="assets/optimized/quality-1-320.webp 320w, assets/optimized/quality-1-640.webp 640w, assets/optimized/quality-1-826.webp 826w" sizes="(max-width: 820px) 92vw, 560px" width="826" height="1043" alt="" aria-hidden="true" loading="lazy" decoding="async"></div>
+      <div class="ph reveal has-img" role="img" aria-label="Hand-picking red coffee cherries" style=""><img class="responsive-photo" src="assets/optimized/quality-2-827.webp" srcset="assets/optimized/quality-2-320.webp 320w, assets/optimized/quality-2-640.webp 640w, assets/optimized/quality-2-827.webp 827w" sizes="(max-width: 820px) 92vw, 560px" width="827" height="1043" alt="" aria-hidden="true" loading="lazy" decoding="async"></div>
+      <div class="ph reveal has-img" role="img" aria-label="Ripe red coffee cherries on the tree" style=""><img class="responsive-photo" src="assets/optimized/quality-3-826.webp" srcset="assets/optimized/quality-3-320.webp 320w, assets/optimized/quality-3-640.webp 640w, assets/optimized/quality-3-826.webp 826w" sizes="(max-width: 820px) 92vw, 560px" width="826" height="1043" alt="" aria-hidden="true" loading="lazy" decoding="async"></div>
     </div>
   </div>
 </section>
@@ -579,17 +584,17 @@ footer{background:#073620;color:var(--sage-light);text-align:center;padding:22px
         <article class="cat-item reveal">
           <h4>Temanggung Fine Coffee</h4>
           <div class="forms">
-            <figure><div class="ph bean circle has-img" role="img" aria-label="Temanggung Fine Coffee green bean" style="background-image:url('assets/robusta-fine-green.webp')"></div><figcaption>GreenBean</figcaption></figure>
-            <figure><div class="ph roast circle has-img" role="img" aria-label="Temanggung Fine Coffee roasted bean" style="background-image:url('assets/robusta-fine-roasted.webp')"></div><figcaption>Roasted Bean</figcaption></figure>
-            <figure><div class="ph ground circle has-img" role="img" aria-label="Temanggung Fine Coffee ground coffee" style="background-image:url('assets/robusta-fine-ground.webp')"></div><figcaption>Ground coffee</figcaption></figure>
+            <figure><div class="ph bean circle has-img" role="img" aria-label="Temanggung Fine Coffee green bean" style=""><img class="responsive-photo" src="assets/optimized/robusta-fine-green-291.webp" srcset="assets/optimized/robusta-fine-green-291.webp 291w" sizes="180px" width="291" height="292" alt="" aria-hidden="true" loading="lazy" decoding="async"></div><figcaption>GreenBean</figcaption></figure>
+            <figure><div class="ph roast circle has-img" role="img" aria-label="Temanggung Fine Coffee roasted bean" style=""><img class="responsive-photo" src="assets/optimized/robusta-fine-roasted-292.webp" srcset="assets/optimized/robusta-fine-roasted-292.webp 292w" sizes="180px" width="292" height="292" alt="" aria-hidden="true" loading="lazy" decoding="async"></div><figcaption>Roasted Bean</figcaption></figure>
+            <figure><div class="ph ground circle has-img" role="img" aria-label="Temanggung Fine Coffee ground coffee" style=""><img class="responsive-photo" src="assets/optimized/robusta-fine-ground-292.webp" srcset="assets/optimized/robusta-fine-ground-292.webp 292w" sizes="180px" width="292" height="292" alt="" aria-hidden="true" loading="lazy" decoding="async"></div><figcaption>Ground coffee</figcaption></figure>
           </div>
         </article>
         <article class="cat-item reveal">
           <h4>Temanggung Coffee Anaerob Process</h4>
           <div class="forms">
-            <figure><div class="ph bean circle has-img" role="img" aria-label="Temanggung Coffee Anaerob Process green bean" style="background-image:url('assets/robusta-anaerob-green.webp')"></div><figcaption>GreenBean</figcaption></figure>
-            <figure><div class="ph roast circle has-img" role="img" aria-label="Temanggung Coffee Anaerob Process roasted bean" style="background-image:url('assets/robusta-anaerob-roasted.webp')"></div><figcaption>Roasted Bean</figcaption></figure>
-            <figure><div class="ph ground circle has-img" role="img" aria-label="Temanggung Coffee Anaerob Process ground coffee" style="background-image:url('assets/robusta-anaerob-ground.webp')"></div><figcaption>Ground coffee</figcaption></figure>
+            <figure><div class="ph bean circle has-img" role="img" aria-label="Temanggung Coffee Anaerob Process green bean" style=""><img class="responsive-photo" src="assets/optimized/robusta-anaerob-green-291.webp" srcset="assets/optimized/robusta-anaerob-green-291.webp 291w" sizes="180px" width="291" height="291" alt="" aria-hidden="true" loading="lazy" decoding="async"></div><figcaption>GreenBean</figcaption></figure>
+            <figure><div class="ph roast circle has-img" role="img" aria-label="Temanggung Coffee Anaerob Process roasted bean" style=""><img class="responsive-photo" src="assets/optimized/robusta-anaerob-roasted-292.webp" srcset="assets/optimized/robusta-anaerob-roasted-292.webp 292w" sizes="180px" width="292" height="291" alt="" aria-hidden="true" loading="lazy" decoding="async"></div><figcaption>Roasted Bean</figcaption></figure>
+            <figure><div class="ph ground circle has-img" role="img" aria-label="Temanggung Coffee Anaerob Process ground coffee" style=""><img class="responsive-photo" src="assets/optimized/robusta-anaerob-ground-292.webp" srcset="assets/optimized/robusta-anaerob-ground-292.webp 292w" sizes="180px" width="292" height="291" alt="" aria-hidden="true" loading="lazy" decoding="async"></div><figcaption>Ground coffee</figcaption></figure>
           </div>
         </article>
       </div>
@@ -602,17 +607,17 @@ footer{background:#073620;color:var(--sage-light);text-align:center;padding:22px
         <article class="cat-item reveal">
           <h4>Kalibening Speciality Coffee Natural Process</h4>
           <div class="forms">
-            <figure><div class="ph bean circle has-img" role="img" aria-label="Kalibening Natural Process green bean" style="background-image:url('assets/arabica-natural-green.webp')"></div><figcaption>GreenBean</figcaption></figure>
-            <figure><div class="ph roast circle has-img" role="img" aria-label="Kalibening Natural Process roasted bean" style="background-image:url('assets/arabica-natural-roasted.webp')"></div><figcaption>Roasted Bean</figcaption></figure>
-            <figure><div class="ph ground circle has-img" role="img" aria-label="Kalibening Natural Process ground coffee" style="background-image:url('assets/arabica-natural-ground.webp')"></div><figcaption>Ground coffee</figcaption></figure>
+            <figure><div class="ph bean circle has-img" role="img" aria-label="Kalibening Natural Process green bean" style=""><img class="responsive-photo" src="assets/optimized/arabica-natural-green-291.webp" srcset="assets/optimized/arabica-natural-green-291.webp 291w" sizes="180px" width="291" height="292" alt="" aria-hidden="true" loading="lazy" decoding="async"></div><figcaption>GreenBean</figcaption></figure>
+            <figure><div class="ph roast circle has-img" role="img" aria-label="Kalibening Natural Process roasted bean" style=""><img class="responsive-photo" src="assets/optimized/arabica-natural-roasted-292.webp" srcset="assets/optimized/arabica-natural-roasted-292.webp 292w" sizes="180px" width="292" height="292" alt="" aria-hidden="true" loading="lazy" decoding="async"></div><figcaption>Roasted Bean</figcaption></figure>
+            <figure><div class="ph ground circle has-img" role="img" aria-label="Kalibening Natural Process ground coffee" style=""><img class="responsive-photo" src="assets/optimized/arabica-natural-ground-292.webp" srcset="assets/optimized/arabica-natural-ground-292.webp 292w" sizes="180px" width="292" height="292" alt="" aria-hidden="true" loading="lazy" decoding="async"></div><figcaption>Ground coffee</figcaption></figure>
           </div>
         </article>
         <article class="cat-item reveal">
           <h4>Kalibening Speciality Coffee Full Wash Process</h4>
           <div class="forms">
-            <figure><div class="ph bean circle has-img" role="img" aria-label="Kalibening Full Wash Process green bean" style="background-image:url('assets/arabica-wash-green.webp')"></div><figcaption>GreenBean</figcaption></figure>
-            <figure><div class="ph roast circle has-img" role="img" aria-label="Kalibening Full Wash Process roasted bean" style="background-image:url('assets/arabica-wash-roasted.webp')"></div><figcaption>Roasted Bean</figcaption></figure>
-            <figure><div class="ph ground circle has-img" role="img" aria-label="Kalibening Full Wash Process ground coffee" style="background-image:url('assets/arabica-wash-ground.webp')"></div><figcaption>Ground coffee</figcaption></figure>
+            <figure><div class="ph bean circle has-img" role="img" aria-label="Kalibening Full Wash Process green bean" style=""><img class="responsive-photo" src="assets/optimized/arabica-wash-green-291.webp" srcset="assets/optimized/arabica-wash-green-291.webp 291w" sizes="180px" width="291" height="291" alt="" aria-hidden="true" loading="lazy" decoding="async"></div><figcaption>GreenBean</figcaption></figure>
+            <figure><div class="ph roast circle has-img" role="img" aria-label="Kalibening Full Wash Process roasted bean" style=""><img class="responsive-photo" src="assets/optimized/arabica-wash-roasted-292.webp" srcset="assets/optimized/arabica-wash-roasted-292.webp 292w" sizes="180px" width="292" height="291" alt="" aria-hidden="true" loading="lazy" decoding="async"></div><figcaption>Roasted Bean</figcaption></figure>
+            <figure><div class="ph ground circle has-img" role="img" aria-label="Kalibening Full Wash Process ground coffee" style=""><img class="responsive-photo" src="assets/optimized/arabica-wash-ground-292.webp" srcset="assets/optimized/arabica-wash-ground-292.webp 292w" sizes="180px" width="292" height="291" alt="" aria-hidden="true" loading="lazy" decoding="async"></div><figcaption>Ground coffee</figcaption></figure>
           </div>
         </article>
       </div>
@@ -632,8 +637,8 @@ footer{background:#073620;color:var(--sage-light);text-align:center;padding:22px
           </dl>
         </div>
         <div class="forms">
-          <figure><div class="ph roast circle has-img" role="img" aria-label="Blend roasted bean" style="background-image:url('assets/blend-roasted.webp')"></div><figcaption>Roasted Bean</figcaption></figure>
-          <figure><div class="ph ground circle has-img" role="img" aria-label="Blend ground coffee" style="background-image:url('assets/blend-ground.webp')"></div><figcaption>Ground coffee</figcaption></figure>
+          <figure><div class="ph roast circle has-img" role="img" aria-label="Blend roasted bean" style=""><img class="responsive-photo" src="assets/optimized/blend-roasted-344.webp" srcset="assets/optimized/blend-roasted-320.webp 320w, assets/optimized/blend-roasted-344.webp 344w" sizes="180px" width="344" height="344" alt="" aria-hidden="true" loading="lazy" decoding="async"></div><figcaption>Roasted Bean</figcaption></figure>
+          <figure><div class="ph ground circle has-img" role="img" aria-label="Blend ground coffee" style=""><img class="responsive-photo" src="assets/optimized/blend-ground-344.webp" srcset="assets/optimized/blend-ground-320.webp 320w, assets/optimized/blend-ground-344.webp 344w" sizes="180px" width="344" height="344" alt="" aria-hidden="true" loading="lazy" decoding="async"></div><figcaption>Ground coffee</figcaption></figure>
         </div>
       </article>
     </div>
@@ -649,17 +654,17 @@ footer{background:#073620;color:var(--sage-light);text-align:center;padding:22px
     <p class="lead reveal" style="margin-top:12px">Available for home enthusiasts, coffee shops, roasteries, and export</p>
     <div class="choose">
       <article class="reveal">
-        <div class="ph bean circle has-img" role="img" aria-label="Green coffee beans" style="background-image:url('assets/choose-greenbean.webp')"></div>
+        <div class="ph bean circle has-img" role="img" aria-label="Green coffee beans" style=""><img class="responsive-photo" src="assets/optimized/choose-greenbean-344.webp" srcset="assets/optimized/choose-greenbean-320.webp 320w, assets/optimized/choose-greenbean-344.webp 344w" sizes="220px" width="344" height="345" alt="" aria-hidden="true" loading="lazy" decoding="async"></div>
         <h3>GreenBean</h3>
         <p>Raw coffee beans for roasteries and roast profile development.</p>
       </article>
       <article class="reveal">
-        <div class="ph roast circle has-img" role="img" aria-label="Roasted coffee beans" style="background-image:url('assets/choose-roasted.webp')"></div>
+        <div class="ph roast circle has-img" role="img" aria-label="Roasted coffee beans" style=""><img class="responsive-photo" src="assets/optimized/choose-roasted-345.webp" srcset="assets/optimized/choose-roasted-320.webp 320w, assets/optimized/choose-roasted-345.webp 345w" sizes="220px" width="345" height="345" alt="" aria-hidden="true" loading="lazy" decoding="async"></div>
         <h3>Roasted Bean</h3>
         <p>Roasted beans for coffee shops and fresh grind brewing.</p>
       </article>
       <article class="reveal">
-        <div class="ph ground circle has-img" role="img" aria-label="Ground coffee" style="background-image:url('assets/choose-ground.webp')"></div>
+        <div class="ph ground circle has-img" role="img" aria-label="Ground coffee" style=""><img class="responsive-photo" src="assets/optimized/choose-ground-344.webp" srcset="assets/optimized/choose-ground-320.webp 320w, assets/optimized/choose-ground-344.webp 344w" sizes="220px" width="344" height="345" alt="" aria-hidden="true" loading="lazy" decoding="async"></div>
         <h3>Ground coffee</h3>
         <p>Ready to brew ground coffee for home use and packaged products.</p>
       </article>
@@ -681,7 +686,7 @@ footer{background:#073620;color:var(--sage-light);text-align:center;padding:22px
         <!-- a) Temanggung Fine Coffee -->
         <article class="product reveal">
           <div class="product-head">
-            <div class="ph kraft circle has-img contain" role="img" aria-label="Temanggung Fine Coffee kraft sack" style="background-image:url('assets/robusta-fine-bag.webp')"></div>
+            <div class="ph kraft circle has-img contain" role="img" aria-label="Temanggung Fine Coffee kraft sack" style=""><img class="responsive-photo" src="assets/optimized/robusta-fine-bag-628.webp" srcset="assets/optimized/robusta-fine-bag-320.webp 320w, assets/optimized/robusta-fine-bag-628.webp 628w" sizes="180px" width="628" height="610" alt="" aria-hidden="true" loading="lazy" decoding="async"></div>
             <div>
               <h4>TEMANGGUNG FINE COFFEE</h4>
               <p>Suited to traditional coffee drinkers who want a strong flavor and distinctive character.</p>
@@ -701,7 +706,7 @@ footer{background:#073620;color:var(--sage-light);text-align:center;padding:22px
         <!-- b) Temanggung Fine Coffee Anaerob Process -->
         <article class="product reveal">
           <div class="product-head">
-            <div class="ph kraft circle has-img contain" role="img" aria-label="Temanggung Fine Coffee Anaerob Process kraft sack" style="background-image:url('assets/robusta-anaerob-bag.webp')"></div>
+            <div class="ph kraft circle has-img contain" role="img" aria-label="Temanggung Fine Coffee Anaerob Process kraft sack" style=""><img class="responsive-photo" src="assets/optimized/robusta-anaerob-bag-628.webp" srcset="assets/optimized/robusta-anaerob-bag-320.webp 320w, assets/optimized/robusta-anaerob-bag-628.webp 628w" sizes="180px" width="628" height="610" alt="" aria-hidden="true" loading="lazy" decoding="async"></div>
             <div>
               <h4>TEMANGGUNG FINE COFFEE ANAEROB PROCESS</h4>
               <p>A distinctive robusta that delivers a unique, sweet, and bold flavor experience.</p>
@@ -729,7 +734,7 @@ footer{background:#073620;color:var(--sage-light);text-align:center;padding:22px
         <!-- c) Kalibening Natural Process -->
         <article class="product reveal">
           <div class="product-head">
-            <div class="ph kraft circle has-img contain" role="img" aria-label="Kalibening Speciality Coffee Natural Process kraft sack" style="background-image:url('assets/arabica-natural-bag.webp')"></div>
+            <div class="ph kraft circle has-img contain" role="img" aria-label="Kalibening Speciality Coffee Natural Process kraft sack" style=""><img class="responsive-photo" src="assets/optimized/arabica-natural-bag-628.webp" srcset="assets/optimized/arabica-natural-bag-320.webp 320w, assets/optimized/arabica-natural-bag-628.webp 628w" sizes="180px" width="628" height="610" alt="" aria-hidden="true" loading="lazy" decoding="async"></div>
             <div>
               <h4>KALIBENING SPECIALITY COFFEE NATURAL PROCESS</h4>
               <p>An explosively fruity coffee, perfect for those who love fresh, exotic flavors.</p>
@@ -749,7 +754,7 @@ footer{background:#073620;color:var(--sage-light);text-align:center;padding:22px
         <!-- d) Kalibening Full Wash Process -->
         <article class="product reveal">
           <div class="product-head">
-            <div class="ph kraft circle has-img contain" role="img" aria-label="Kalibening Speciality Coffee Full Wash Process kraft sack" style="background-image:url('assets/arabica-wash-bag.webp')"></div>
+            <div class="ph kraft circle has-img contain" role="img" aria-label="Kalibening Speciality Coffee Full Wash Process kraft sack" style=""><img class="responsive-photo" src="assets/optimized/arabica-wash-bag-628.webp" srcset="assets/optimized/arabica-wash-bag-320.webp 320w, assets/optimized/arabica-wash-bag-628.webp 628w" sizes="180px" width="628" height="610" alt="" aria-hidden="true" loading="lazy" decoding="async"></div>
             <div>
               <h4>KALIBENING SPECIALITY COFFEE FULL WASH PROCESS</h4>
               <p>A classic Arabica with a clean, balanced, and elegant flavor, a favorite among pure coffee lovers.</p>
@@ -777,7 +782,7 @@ footer{background:#073620;color:var(--sage-light);text-align:center;padding:22px
         <!-- e) Blend Arabica 30% + Robusta 70% -->
         <article class="product reveal">
           <div class="product-head">
-            <div class="ph circle has-img" role="img" aria-label="Blend roasted coffee in metal scoop" style="background-image:url('assets/blend-scoop.webp')"></div>
+            <div class="ph circle has-img" role="img" aria-label="Blend roasted coffee in metal scoop" style=""><img class="responsive-photo" src="assets/optimized/blend-scoop-648.webp" srcset="assets/optimized/blend-scoop-320.webp 320w, assets/optimized/blend-scoop-640.webp 640w, assets/optimized/blend-scoop-648.webp 648w" sizes="180px" width="648" height="648" alt="" aria-hidden="true" loading="lazy" decoding="async"></div>
             <div>
               <h4>BLEND ROASTED COFFEE ARABICA 30% + ROBUSTA 70%</h4>
               <p>A combination that brings together the strength of robusta and the fragrance of arabica, suited to those who want a bold yet balanced cup.</p>
@@ -809,11 +814,11 @@ footer{background:#073620;color:var(--sage-light);text-align:center;padding:22px
     <div class="tea-wrap">
       <div class="tea-pics">
         <figure class="reveal">
-          <div class="ph tea-black circle has-img" role="img" aria-label="AZBO Pucuk Hening black tea" style="background-image:url('assets/black-tea.webp')"></div>
+          <div class="ph tea-black circle has-img" role="img" aria-label="AZBO Pucuk Hening black tea" style=""><img class="responsive-photo" src="assets/optimized/black-tea-593.webp" srcset="assets/optimized/black-tea-320.webp 320w, assets/optimized/black-tea-593.webp 593w" sizes="220px" width="593" height="595" alt="" aria-hidden="true" loading="lazy" decoding="async"></div>
           <h3>BLACK TEA</h3>
         </figure>
         <figure class="reveal">
-          <div class="ph tea-green circle has-img" role="img" aria-label="AZBO Pucuk Hening green tea" style="background-image:url('assets/green-tea.webp')"></div>
+          <div class="ph tea-green circle has-img" role="img" aria-label="AZBO Pucuk Hening green tea" style=""><img class="responsive-photo" src="assets/optimized/green-tea-593.webp" srcset="assets/optimized/green-tea-320.webp 320w, assets/optimized/green-tea-593.webp 593w" sizes="220px" width="593" height="593" alt="" aria-hidden="true" loading="lazy" decoding="async"></div>
           <h3>GREEN TEA</h3>
         </figure>
       </div>
@@ -836,7 +841,7 @@ footer{background:#073620;color:var(--sage-light);text-align:center;padding:22px
       <article class="product" id="black-white-pepper">
         <div class="product-head"><h3>Black &amp; White Pepper</h3></div>
         <figure>
-          <img src="assets/black-white-pepper.webp" alt="Dark whole peppercorns pictured in the catalogue's Black and White Pepper entry" width="1200" height="800" loading="lazy" style="width:100%;height:auto">
+          <img src="assets/optimized/black-white-pepper-1200.webp" srcset="assets/optimized/black-white-pepper-320.webp 320w, assets/optimized/black-white-pepper-640.webp 640w, assets/optimized/black-white-pepper-960.webp 960w, assets/optimized/black-white-pepper-1200.webp 1200w" sizes="(max-width: 900px) 92vw, 577px" width="1200" height="800" alt="Dark whole peppercorns pictured in the catalogue's Black and White Pepper entry" loading="lazy" style="width:100%;height:auto">
           <figcaption style="padding:10px 28px;font-size:.9rem">Catalogue photo shows black peppercorns; white pepper is listed but not separately pictured.</figcaption>
         </figure>
         <div class="product-body">
@@ -851,7 +856,7 @@ footer{background:#073620;color:var(--sage-light);text-align:center;padding:22px
       <article class="product" id="cubeb-pepper">
         <div class="product-head"><h3>Cubeb Pepper</h3></div>
         <figure>
-          <img src="assets/cubeb-pepper.webp" alt="Whole cubeb peppercorns with visible tails in and around a wooden spoon" width="900" height="600" loading="lazy" style="width:100%;height:auto">
+          <img src="assets/optimized/cubeb-pepper-900.webp" srcset="assets/optimized/cubeb-pepper-320.webp 320w, assets/optimized/cubeb-pepper-640.webp 640w, assets/optimized/cubeb-pepper-900.webp 900w" sizes="(max-width: 900px) 92vw, 577px" width="900" height="600" alt="Whole cubeb peppercorns with visible tails in and around a wooden spoon" loading="lazy" style="width:100%;height:auto">
           <figcaption style="padding:10px 28px;font-size:.9rem">Whole tailed peppercorns, as pictured in the catalogue.</figcaption>
         </figure>
         <div class="product-body">
@@ -888,7 +893,7 @@ footer{background:#073620;color:var(--sage-light);text-align:center;padding:22px
      14. ACCOMPANYING EVERY STEP OF THE COFFEE JOURNEY
      ========================================================= -->
 <section class="on-green" id="journey" style="color:var(--cream);overflow:hidden">
-  <div class="ph overlay-photo has-img" role="img" aria-label="Farmer hand-picking coffee cherries" style="background-image:url('assets/journey-bg.webp')"></div>
+  <div class="ph overlay-photo has-img" role="img" aria-label="Farmer hand-picking coffee cherries" style=""><img class="responsive-photo" src="assets/optimized/journey-bg-1669.webp" srcset="assets/optimized/journey-bg-320.webp 320w, assets/optimized/journey-bg-640.webp 640w, assets/optimized/journey-bg-960.webp 960w, assets/optimized/journey-bg-1280.webp 1280w, assets/optimized/journey-bg-1669.webp 1669w" sizes="100vw" width="1669" height="1170" alt="" aria-hidden="true" loading="lazy" decoding="async"></div>
   <div class="container overlay-content">
     <h2 class="reveal center">Accompanying Every Step of the Coffee Journey</h2>
     <p class="lead reveal center" style="margin-top:12px;max-width:60ch;margin-inline:auto">More than just purchasing harvests, AZBO builds relationships from farm to market.</p>
@@ -914,7 +919,7 @@ footer{background:#073620;color:var(--sage-light);text-align:center;padding:22px
      15. CONTACT
      ========================================================= -->
 <section class="contact" id="contact">
-  <div class="ph overlay-photo has-img" role="img" aria-label="Green highland landscape of Indonesia" style="background-image:url('assets/cover-farm.webp')"></div>
+  <div class="ph overlay-photo has-img" role="img" aria-label="Green highland landscape of Indonesia" style=""><img class="responsive-photo" src="assets/optimized/cover-farm-1687.webp" srcset="assets/optimized/cover-farm-320.webp 320w, assets/optimized/cover-farm-640.webp 640w, assets/optimized/cover-farm-960.webp 960w, assets/optimized/cover-farm-1280.webp 1280w, assets/optimized/cover-farm-1687.webp 1687w" sizes="100vw" width="1687" height="1124" alt="" aria-hidden="true" loading="lazy" decoding="async"></div>
   <div class="container overlay-content contact-grid">
     <div class="reveal">
       <img src="assets/logo-white.png" alt="AZBO logo" class="contact-logo" width="1132" height="400" loading="lazy" decoding="async">

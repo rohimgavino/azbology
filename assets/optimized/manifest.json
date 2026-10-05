@@ -1,0 +1,782 @@
+{
+  "pillow": "12.3.0",
+  "libwebp": "1.6.0",
+  "quality": 90,
+  "method": 6,
+  "images": [
+    {
+      "source": "assets/arabica-natural-bag.webp",
+      "source_sha256": "84383d19f5f3fafd145e75142e6590a0d8e8938e8bc4945e05137d8e196d2537",
+      "source_bytes": 94202,
+      "path": "assets/optimized/arabica-natural-bag-320.webp",
+      "width": 320,
+      "height": 311,
+      "bytes": 28146
+    },
+    {
+      "source": "assets/arabica-natural-bag.webp",
+      "source_sha256": "84383d19f5f3fafd145e75142e6590a0d8e8938e8bc4945e05137d8e196d2537",
+      "source_bytes": 94202,
+      "path": "assets/optimized/arabica-natural-bag-628.webp",
+      "width": 628,
+      "height": 610,
+      "bytes": 70250
+    },
+    {
+      "source": "assets/arabica-natural-green.webp",
+      "source_sha256": "17788985b49ccc10dcbe6a3a5f7821b99c0f901f4c5babad68c1bbbeb0663552",
+      "source_bytes": 23622,
+      "path": "assets/optimized/arabica-natural-green-291.webp",
+      "width": 291,
+      "height": 292,
+      "bytes": 15168
+    },
+    {
+      "source": "assets/arabica-natural-ground.webp",
+      "source_sha256": "4a930d51b46cb4d9bd67258da28f102d6860030cf7545f508f00403943b336cb",
+      "source_bytes": 30814,
+      "path": "assets/optimized/arabica-natural-ground-292.webp",
+      "width": 292,
+      "height": 292,
+      "bytes": 21206
+    },
+    {
+      "source": "assets/arabica-natural-roasted.webp",
+      "source_sha256": "52135859005f4990d652e3ff477cbc748e782c6e4680c0e70f31b1d15c560cb1",
+      "source_bytes": 29946,
+      "path": "assets/optimized/arabica-natural-roasted-292.webp",
+      "width": 292,
+      "height": 292,
+      "bytes": 20704
+    },
+    {
+      "source": "assets/arabica-wash-bag.webp",
+      "source_sha256": "bcc256e583b8a30bfafac04a3665c31373686d425b5207e568cdc3e5676feb0c",
+      "source_bytes": 95090,
+      "path": "assets/optimized/arabica-wash-bag-320.webp",
+      "width": 320,
+      "height": 311,
+      "bytes": 28138
+    },
+    {
+      "source": "assets/arabica-wash-bag.webp",
+      "source_sha256": "bcc256e583b8a30bfafac04a3665c31373686d425b5207e568cdc3e5676feb0c",
+      "source_bytes": 95090,
+      "path": "assets/optimized/arabica-wash-bag-628.webp",
+      "width": 628,
+      "height": 610,
+      "bytes": 71010
+    },
+    {
+      "source": "assets/arabica-wash-green.webp",
+      "source_sha256": "693e513797761a73434836d1a2d77785736c2b24e55aa8d382d9613807780584",
+      "source_bytes": 25012,
+      "path": "assets/optimized/arabica-wash-green-291.webp",
+      "width": 291,
+      "height": 291,
+      "bytes": 17018
+    },
+    {
+      "source": "assets/arabica-wash-ground.webp",
+      "source_sha256": "d74e023006ea0dfe1f216dd860bca79e8e94ef54941125ee8fb8b18004461073",
+      "source_bytes": 26248,
+      "path": "assets/optimized/arabica-wash-ground-292.webp",
+      "width": 292,
+      "height": 291,
+      "bytes": 17290
+    },
+    {
+      "source": "assets/arabica-wash-roasted.webp",
+      "source_sha256": "9654538c51cc088c91469857aba7a08cc46100739e1ed32d79387d9dd9fdb32f",
+      "source_bytes": 20288,
+      "path": "assets/optimized/arabica-wash-roasted-292.webp",
+      "width": 292,
+      "height": 291,
+      "bytes": 14666
+    },
+    {
+      "source": "assets/black-tea.webp",
+      "source_sha256": "a3400e9c07fcc3f4f5b4ecd28a551d22f14d0658adecabaf9b6dd1ac4c89cfb3",
+      "source_bytes": 179140,
+      "path": "assets/optimized/black-tea-320.webp",
+      "width": 320,
+      "height": 321,
+      "bytes": 45556
+    },
+    {
+      "source": "assets/black-tea.webp",
+      "source_sha256": "a3400e9c07fcc3f4f5b4ecd28a551d22f14d0658adecabaf9b6dd1ac4c89cfb3",
+      "source_bytes": 179140,
+      "path": "assets/optimized/black-tea-593.webp",
+      "width": 593,
+      "height": 595,
+      "bytes": 137932
+    },
+    {
+      "source": "assets/black-white-pepper.webp",
+      "source_sha256": "1413c09915f9dde700e7ef3a7f43435d3310283071119fdb2b824702911bae92",
+      "source_bytes": 528794,
+      "path": "assets/optimized/black-white-pepper-320.webp",
+      "width": 320,
+      "height": 213,
+      "bytes": 41974
+    },
+    {
+      "source": "assets/black-white-pepper.webp",
+      "source_sha256": "1413c09915f9dde700e7ef3a7f43435d3310283071119fdb2b824702911bae92",
+      "source_bytes": 528794,
+      "path": "assets/optimized/black-white-pepper-640.webp",
+      "width": 640,
+      "height": 427,
+      "bytes": 158732
+    },
+    {
+      "source": "assets/black-white-pepper.webp",
+      "source_sha256": "1413c09915f9dde700e7ef3a7f43435d3310283071119fdb2b824702911bae92",
+      "source_bytes": 528794,
+      "path": "assets/optimized/black-white-pepper-960.webp",
+      "width": 960,
+      "height": 640,
+      "bytes": 330742
+    },
+    {
+      "source": "assets/black-white-pepper.webp",
+      "source_sha256": "1413c09915f9dde700e7ef3a7f43435d3310283071119fdb2b824702911bae92",
+      "source_bytes": 528794,
+      "path": "assets/optimized/black-white-pepper-1200.webp",
+      "width": 1200,
+      "height": 800,
+      "bytes": 503782
+    },
+    {
+      "source": "assets/blend-ground.webp",
+      "source_sha256": "732457be2072b58d6f0c192ce49c54dc154ed7b718f713812e471390c4725d51",
+      "source_bytes": 53246,
+      "path": "assets/optimized/blend-ground-320.webp",
+      "width": 320,
+      "height": 320,
+      "bytes": 33584
+    },
+    {
+      "source": "assets/blend-ground.webp",
+      "source_sha256": "732457be2072b58d6f0c192ce49c54dc154ed7b718f713812e471390c4725d51",
+      "source_bytes": 53246,
+      "path": "assets/optimized/blend-ground-344.webp",
+      "width": 344,
+      "height": 344,
+      "bytes": 37782
+    },
+    {
+      "source": "assets/blend-roasted.webp",
+      "source_sha256": "38392fc177f5b9d94b89079d078304d74d8fd851da8496a96315290afeb78c01",
+      "source_bytes": 36828,
+      "path": "assets/optimized/blend-roasted-320.webp",
+      "width": 320,
+      "height": 320,
+      "bytes": 22330
+    },
+    {
+      "source": "assets/blend-roasted.webp",
+      "source_sha256": "38392fc177f5b9d94b89079d078304d74d8fd851da8496a96315290afeb78c01",
+      "source_bytes": 36828,
+      "path": "assets/optimized/blend-roasted-344.webp",
+      "width": 344,
+      "height": 344,
+      "bytes": 25680
+    },
+    {
+      "source": "assets/blend-scoop.webp",
+      "source_sha256": "cd7de9c3a01d9d092d629e5ccc973e20e0571affa0dbed32c944a6ebefe08ee4",
+      "source_bytes": 76326,
+      "path": "assets/optimized/blend-scoop-320.webp",
+      "width": 320,
+      "height": 320,
+      "bytes": 21714
+    },
+    {
+      "source": "assets/blend-scoop.webp",
+      "source_sha256": "cd7de9c3a01d9d092d629e5ccc973e20e0571affa0dbed32c944a6ebefe08ee4",
+      "source_bytes": 76326,
+      "path": "assets/optimized/blend-scoop-640.webp",
+      "width": 640,
+      "height": 640,
+      "bytes": 48798
+    },
+    {
+      "source": "assets/blend-scoop.webp",
+      "source_sha256": "cd7de9c3a01d9d092d629e5ccc973e20e0571affa0dbed32c944a6ebefe08ee4",
+      "source_bytes": 76326,
+      "path": "assets/optimized/blend-scoop-648.webp",
+      "width": 648,
+      "height": 648,
+      "bytes": 50906
+    },
+    {
+      "source": "assets/choose-greenbean.webp",
+      "source_sha256": "c4ad82876534b800164b4286afed80929485c59ee26b656ad08793ba44f4131a",
+      "source_bytes": 34516,
+      "path": "assets/optimized/choose-greenbean-320.webp",
+      "width": 320,
+      "height": 321,
+      "bytes": 20036
+    },
+    {
+      "source": "assets/choose-greenbean.webp",
+      "source_sha256": "c4ad82876534b800164b4286afed80929485c59ee26b656ad08793ba44f4131a",
+      "source_bytes": 34516,
+      "path": "assets/optimized/choose-greenbean-344.webp",
+      "width": 344,
+      "height": 345,
+      "bytes": 22864
+    },
+    {
+      "source": "assets/choose-ground.webp",
+      "source_sha256": "d7d7a65311634b2a9d0b7d12966edb4ca60fe28029e68d846ee3bd73dbede6db",
+      "source_bytes": 56938,
+      "path": "assets/optimized/choose-ground-320.webp",
+      "width": 320,
+      "height": 321,
+      "bytes": 36742
+    },
+    {
+      "source": "assets/choose-ground.webp",
+      "source_sha256": "d7d7a65311634b2a9d0b7d12966edb4ca60fe28029e68d846ee3bd73dbede6db",
+      "source_bytes": 56938,
+      "path": "assets/optimized/choose-ground-344.webp",
+      "width": 344,
+      "height": 345,
+      "bytes": 41760
+    },
+    {
+      "source": "assets/choose-roasted.webp",
+      "source_sha256": "e5483e9d870db9788e36c003caec1f64ab4096574e4a52302635e9a27cf8baa7",
+      "source_bytes": 31212,
+      "path": "assets/optimized/choose-roasted-320.webp",
+      "width": 320,
+      "height": 320,
+      "bytes": 18136
+    },
+    {
+      "source": "assets/choose-roasted.webp",
+      "source_sha256": "e5483e9d870db9788e36c003caec1f64ab4096574e4a52302635e9a27cf8baa7",
+      "source_bytes": 31212,
+      "path": "assets/optimized/choose-roasted-345.webp",
+      "width": 345,
+      "height": 345,
+      "bytes": 20974
+    },
+    {
+      "source": "assets/coffee-beans.webp",
+      "source_sha256": "def7a97d4ac544e5e4ec6987de8cb3323e564c2cbe3a83fc8e31bdb05e4e7617",
+      "source_bytes": 548716,
+      "path": "assets/optimized/coffee-beans-320.webp",
+      "width": 320,
+      "height": 194,
+      "bytes": 28934
+    },
+    {
+      "source": "assets/coffee-beans.webp",
+      "source_sha256": "def7a97d4ac544e5e4ec6987de8cb3323e564c2cbe3a83fc8e31bdb05e4e7617",
+      "source_bytes": 548716,
+      "path": "assets/optimized/coffee-beans-640.webp",
+      "width": 640,
+      "height": 387,
+      "bytes": 99444
+    },
+    {
+      "source": "assets/coffee-beans.webp",
+      "source_sha256": "def7a97d4ac544e5e4ec6987de8cb3323e564c2cbe3a83fc8e31bdb05e4e7617",
+      "source_bytes": 548716,
+      "path": "assets/optimized/coffee-beans-960.webp",
+      "width": 960,
+      "height": 581,
+      "bytes": 192566
+    },
+    {
+      "source": "assets/coffee-beans.webp",
+      "source_sha256": "def7a97d4ac544e5e4ec6987de8cb3323e564c2cbe3a83fc8e31bdb05e4e7617",
+      "source_bytes": 548716,
+      "path": "assets/optimized/coffee-beans-1280.webp",
+      "width": 1280,
+      "height": 774,
+      "bytes": 299950
+    },
+    {
+      "source": "assets/coffee-beans.webp",
+      "source_sha256": "def7a97d4ac544e5e4ec6987de8cb3323e564c2cbe3a83fc8e31bdb05e4e7617",
+      "source_bytes": 548716,
+      "path": "assets/optimized/coffee-beans-1653.webp",
+      "width": 1653,
+      "height": 1000,
+      "bytes": 425518
+    },
+    {
+      "source": "assets/coffee-field.webp",
+      "source_sha256": "0658ddc9980f1e2282ba18880bb761a71bc6190cf8c0ef7d48508f7c9076102e",
+      "source_bytes": 214256,
+      "path": "assets/optimized/coffee-field-320.webp",
+      "width": 320,
+      "height": 525,
+      "bytes": 49504
+    },
+    {
+      "source": "assets/coffee-field.webp",
+      "source_sha256": "0658ddc9980f1e2282ba18880bb761a71bc6190cf8c0ef7d48508f7c9076102e",
+      "source_bytes": 214256,
+      "path": "assets/optimized/coffee-field-640.webp",
+      "width": 640,
+      "height": 1050,
+      "bytes": 146210
+    },
+    {
+      "source": "assets/coffee-field.webp",
+      "source_sha256": "0658ddc9980f1e2282ba18880bb761a71bc6190cf8c0ef7d48508f7c9076102e",
+      "source_bytes": 214256,
+      "path": "assets/optimized/coffee-field-711.webp",
+      "width": 711,
+      "height": 1166,
+      "bytes": 168396
+    },
+    {
+      "source": "assets/cover-farm.webp",
+      "source_sha256": "9545ff2afbe734d267e2e8adddfb2a7ac7bd0397dd86b856d3537d3f7b762b20",
+      "source_bytes": 583456,
+      "path": "assets/optimized/cover-farm-320.webp",
+      "width": 320,
+      "height": 213,
+      "bytes": 20166
+    },
+    {
+      "source": "assets/cover-farm.webp",
+      "source_sha256": "9545ff2afbe734d267e2e8adddfb2a7ac7bd0397dd86b856d3537d3f7b762b20",
+      "source_bytes": 583456,
+      "path": "assets/optimized/cover-farm-640.webp",
+      "width": 640,
+      "height": 426,
+      "bytes": 77588
+    },
+    {
+      "source": "assets/cover-farm.webp",
+      "source_sha256": "9545ff2afbe734d267e2e8adddfb2a7ac7bd0397dd86b856d3537d3f7b762b20",
+      "source_bytes": 583456,
+      "path": "assets/optimized/cover-farm-960.webp",
+      "width": 960,
+      "height": 640,
+      "bytes": 168464
+    },
+    {
+      "source": "assets/cover-farm.webp",
+      "source_sha256": "9545ff2afbe734d267e2e8adddfb2a7ac7bd0397dd86b856d3537d3f7b762b20",
+      "source_bytes": 583456,
+      "path": "assets/optimized/cover-farm-1280.webp",
+      "width": 1280,
+      "height": 853,
+      "bytes": 281448
+    },
+    {
+      "source": "assets/cover-farm.webp",
+      "source_sha256": "9545ff2afbe734d267e2e8adddfb2a7ac7bd0397dd86b856d3537d3f7b762b20",
+      "source_bytes": 583456,
+      "path": "assets/optimized/cover-farm-1687.webp",
+      "width": 1687,
+      "height": 1124,
+      "bytes": 440262
+    },
+    {
+      "source": "assets/cubeb-pepper.webp",
+      "source_sha256": "73f804c4a89f75f944f29f56bf1705bc2f7d97dc92d24e194fde1c828f3b29e5",
+      "source_bytes": 179048,
+      "path": "assets/optimized/cubeb-pepper-320.webp",
+      "width": 320,
+      "height": 213,
+      "bytes": 34368
+    },
+    {
+      "source": "assets/cubeb-pepper.webp",
+      "source_sha256": "73f804c4a89f75f944f29f56bf1705bc2f7d97dc92d24e194fde1c828f3b29e5",
+      "source_bytes": 179048,
+      "path": "assets/optimized/cubeb-pepper-640.webp",
+      "width": 640,
+      "height": 427,
+      "bytes": 103976
+    },
+    {
+      "source": "assets/cubeb-pepper.webp",
+      "source_sha256": "73f804c4a89f75f944f29f56bf1705bc2f7d97dc92d24e194fde1c828f3b29e5",
+      "source_bytes": 179048,
+      "path": "assets/optimized/cubeb-pepper-900.webp",
+      "width": 900,
+      "height": 600,
+      "bytes": 174168
+    },
+    {
+      "source": "assets/farmer.webp",
+      "source_sha256": "22d93f0fea05c94c2fcf4dea91c723a2b72c39b4a7c9a4fe8cb709ee5878e598",
+      "source_bytes": 350206,
+      "path": "assets/optimized/farmer-320.webp",
+      "width": 320,
+      "height": 531,
+      "bytes": 48784
+    },
+    {
+      "source": "assets/farmer.webp",
+      "source_sha256": "22d93f0fea05c94c2fcf4dea91c723a2b72c39b4a7c9a4fe8cb709ee5878e598",
+      "source_bytes": 350206,
+      "path": "assets/optimized/farmer-640.webp",
+      "width": 640,
+      "height": 1062,
+      "bytes": 141416
+    },
+    {
+      "source": "assets/farmer.webp",
+      "source_sha256": "22d93f0fea05c94c2fcf4dea91c723a2b72c39b4a7c9a4fe8cb709ee5878e598",
+      "source_bytes": 350206,
+      "path": "assets/optimized/farmer-960.webp",
+      "width": 960,
+      "height": 1593,
+      "bytes": 268638
+    },
+    {
+      "source": "assets/farmer.webp",
+      "source_sha256": "22d93f0fea05c94c2fcf4dea91c723a2b72c39b4a7c9a4fe8cb709ee5878e598",
+      "source_bytes": 350206,
+      "path": "assets/optimized/farmer-982.webp",
+      "width": 982,
+      "height": 1629,
+      "bytes": 266294
+    },
+    {
+      "source": "assets/green-tea.webp",
+      "source_sha256": "b8d162582aa33a7d301bd9b9bc34fc0ff83a11f93ede29e4632cb49a11561469",
+      "source_bytes": 180522,
+      "path": "assets/optimized/green-tea-320.webp",
+      "width": 320,
+      "height": 320,
+      "bytes": 45458
+    },
+    {
+      "source": "assets/green-tea.webp",
+      "source_sha256": "b8d162582aa33a7d301bd9b9bc34fc0ff83a11f93ede29e4632cb49a11561469",
+      "source_bytes": 180522,
+      "path": "assets/optimized/green-tea-593.webp",
+      "width": 593,
+      "height": 593,
+      "bytes": 141542
+    },
+    {
+      "source": "assets/hero-landscape.webp",
+      "source_sha256": "e2cc65eb52db32f7f3c3c31d113736e127577bf7ddf2412d6532c7f66f3cb4f2",
+      "source_bytes": 555260,
+      "path": "assets/optimized/hero-landscape-320.webp",
+      "width": 320,
+      "height": 179,
+      "bytes": 21958
+    },
+    {
+      "source": "assets/hero-landscape.webp",
+      "source_sha256": "e2cc65eb52db32f7f3c3c31d113736e127577bf7ddf2412d6532c7f66f3cb4f2",
+      "source_bytes": 555260,
+      "path": "assets/optimized/hero-landscape-640.webp",
+      "width": 640,
+      "height": 359,
+      "bytes": 78406
+    },
+    {
+      "source": "assets/hero-landscape.webp",
+      "source_sha256": "e2cc65eb52db32f7f3c3c31d113736e127577bf7ddf2412d6532c7f66f3cb4f2",
+      "source_bytes": 555260,
+      "path": "assets/optimized/hero-landscape-960.webp",
+      "width": 960,
+      "height": 538,
+      "bytes": 170896
+    },
+    {
+      "source": "assets/hero-landscape.webp",
+      "source_sha256": "e2cc65eb52db32f7f3c3c31d113736e127577bf7ddf2412d6532c7f66f3cb4f2",
+      "source_bytes": 555260,
+      "path": "assets/optimized/hero-landscape-1280.webp",
+      "width": 1280,
+      "height": 717,
+      "bytes": 285038
+    },
+    {
+      "source": "assets/hero-landscape.webp",
+      "source_sha256": "e2cc65eb52db32f7f3c3c31d113736e127577bf7ddf2412d6532c7f66f3cb4f2",
+      "source_bytes": 555260,
+      "path": "assets/optimized/hero-landscape-1667.webp",
+      "width": 1667,
+      "height": 934,
+      "bytes": 447188
+    },
+    {
+      "source": "assets/journey-bg.webp",
+      "source_sha256": "9c486548fa5ad83bc23f6a4206d87c94abaf754c56af9dadfa6e04829f7999fc",
+      "source_bytes": 391096,
+      "path": "assets/optimized/journey-bg-320.webp",
+      "width": 320,
+      "height": 224,
+      "bytes": 26626
+    },
+    {
+      "source": "assets/journey-bg.webp",
+      "source_sha256": "9c486548fa5ad83bc23f6a4206d87c94abaf754c56af9dadfa6e04829f7999fc",
+      "source_bytes": 391096,
+      "path": "assets/optimized/journey-bg-640.webp",
+      "width": 640,
+      "height": 449,
+      "bytes": 73998
+    },
+    {
+      "source": "assets/journey-bg.webp",
+      "source_sha256": "9c486548fa5ad83bc23f6a4206d87c94abaf754c56af9dadfa6e04829f7999fc",
+      "source_bytes": 391096,
+      "path": "assets/optimized/journey-bg-960.webp",
+      "width": 960,
+      "height": 673,
+      "bytes": 135398
+    },
+    {
+      "source": "assets/journey-bg.webp",
+      "source_sha256": "9c486548fa5ad83bc23f6a4206d87c94abaf754c56af9dadfa6e04829f7999fc",
+      "source_bytes": 391096,
+      "path": "assets/optimized/journey-bg-1280.webp",
+      "width": 1280,
+      "height": 897,
+      "bytes": 203604
+    },
+    {
+      "source": "assets/journey-bg.webp",
+      "source_sha256": "9c486548fa5ad83bc23f6a4206d87c94abaf754c56af9dadfa6e04829f7999fc",
+      "source_bytes": 391096,
+      "path": "assets/optimized/journey-bg-1669.webp",
+      "width": 1669,
+      "height": 1170,
+      "bytes": 298088
+    },
+    {
+      "source": "assets/origin-kalibening.webp",
+      "source_sha256": "a528f0714e6d009ad1e7c640a37d790036127d8361cdfba47bb04b7e24bf37f9",
+      "source_bytes": 86356,
+      "path": "assets/optimized/origin-kalibening-320.webp",
+      "width": 320,
+      "height": 220,
+      "bytes": 20110
+    },
+    {
+      "source": "assets/origin-kalibening.webp",
+      "source_sha256": "a528f0714e6d009ad1e7c640a37d790036127d8361cdfba47bb04b7e24bf37f9",
+      "source_bytes": 86356,
+      "path": "assets/optimized/origin-kalibening-640.webp",
+      "width": 640,
+      "height": 441,
+      "bytes": 46932
+    },
+    {
+      "source": "assets/origin-kalibening.webp",
+      "source_sha256": "a528f0714e6d009ad1e7c640a37d790036127d8361cdfba47bb04b7e24bf37f9",
+      "source_bytes": 86356,
+      "path": "assets/optimized/origin-kalibening-900.webp",
+      "width": 900,
+      "height": 620,
+      "bytes": 67504
+    },
+    {
+      "source": "assets/origin-temanggung.webp",
+      "source_sha256": "5500f727afc963eb02a902f1772877e02e24d42e75fe6aef16e2931e0ed96691",
+      "source_bytes": 97628,
+      "path": "assets/optimized/origin-temanggung-320.webp",
+      "width": 320,
+      "height": 220,
+      "bytes": 22812
+    },
+    {
+      "source": "assets/origin-temanggung.webp",
+      "source_sha256": "5500f727afc963eb02a902f1772877e02e24d42e75fe6aef16e2931e0ed96691",
+      "source_bytes": 97628,
+      "path": "assets/optimized/origin-temanggung-640.webp",
+      "width": 640,
+      "height": 441,
+      "bytes": 51662
+    },
+    {
+      "source": "assets/origin-temanggung.webp",
+      "source_sha256": "5500f727afc963eb02a902f1772877e02e24d42e75fe6aef16e2931e0ed96691",
+      "source_bytes": 97628,
+      "path": "assets/optimized/origin-temanggung-900.webp",
+      "width": 900,
+      "height": 620,
+      "bytes": 73912
+    },
+    {
+      "source": "assets/quality-1.webp",
+      "source_sha256": "448cc0be40c5b591a6e6f8ab69f3723e0fe0f593a7096770b3317351fd1fbb7f",
+      "source_bytes": 207854,
+      "path": "assets/optimized/quality-1-320.webp",
+      "width": 320,
+      "height": 404,
+      "bytes": 47466
+    },
+    {
+      "source": "assets/quality-1.webp",
+      "source_sha256": "448cc0be40c5b591a6e6f8ab69f3723e0fe0f593a7096770b3317351fd1fbb7f",
+      "source_bytes": 207854,
+      "path": "assets/optimized/quality-1-640.webp",
+      "width": 640,
+      "height": 808,
+      "bytes": 101092
+    },
+    {
+      "source": "assets/quality-1.webp",
+      "source_sha256": "448cc0be40c5b591a6e6f8ab69f3723e0fe0f593a7096770b3317351fd1fbb7f",
+      "source_bytes": 207854,
+      "path": "assets/optimized/quality-1-826.webp",
+      "width": 826,
+      "height": 1043,
+      "bytes": 144506
+    },
+    {
+      "source": "assets/quality-2.webp",
+      "source_sha256": "92e30fb850dce7b454dbfc910630013fd7fac509308bb24e2c1ff3cb2e48ea6f",
+      "source_bytes": 167116,
+      "path": "assets/optimized/quality-2-320.webp",
+      "width": 320,
+      "height": 404,
+      "bytes": 39886
+    },
+    {
+      "source": "assets/quality-2.webp",
+      "source_sha256": "92e30fb850dce7b454dbfc910630013fd7fac509308bb24e2c1ff3cb2e48ea6f",
+      "source_bytes": 167116,
+      "path": "assets/optimized/quality-2-640.webp",
+      "width": 640,
+      "height": 807,
+      "bytes": 89340
+    },
+    {
+      "source": "assets/quality-2.webp",
+      "source_sha256": "92e30fb850dce7b454dbfc910630013fd7fac509308bb24e2c1ff3cb2e48ea6f",
+      "source_bytes": 167116,
+      "path": "assets/optimized/quality-2-827.webp",
+      "width": 827,
+      "height": 1043,
+      "bytes": 126106
+    },
+    {
+      "source": "assets/quality-3.webp",
+      "source_sha256": "fd711d26283a22536ca4e8f2d8fc9f5f9057142eba582c20e13ae085b36b3cde",
+      "source_bytes": 189512,
+      "path": "assets/optimized/quality-3-320.webp",
+      "width": 320,
+      "height": 404,
+      "bytes": 43822
+    },
+    {
+      "source": "assets/quality-3.webp",
+      "source_sha256": "fd711d26283a22536ca4e8f2d8fc9f5f9057142eba582c20e13ae085b36b3cde",
+      "source_bytes": 189512,
+      "path": "assets/optimized/quality-3-640.webp",
+      "width": 640,
+      "height": 808,
+      "bytes": 99634
+    },
+    {
+      "source": "assets/quality-3.webp",
+      "source_sha256": "fd711d26283a22536ca4e8f2d8fc9f5f9057142eba582c20e13ae085b36b3cde",
+      "source_bytes": 189512,
+      "path": "assets/optimized/quality-3-826.webp",
+      "width": 826,
+      "height": 1043,
+      "bytes": 140568
+    },
+    {
+      "source": "assets/robusta-anaerob-bag.webp",
+      "source_sha256": "bcc256e583b8a30bfafac04a3665c31373686d425b5207e568cdc3e5676feb0c",
+      "source_bytes": 95090,
+      "path": "assets/optimized/robusta-anaerob-bag-320.webp",
+      "width": 320,
+      "height": 311,
+      "bytes": 28138
+    },
+    {
+      "source": "assets/robusta-anaerob-bag.webp",
+      "source_sha256": "bcc256e583b8a30bfafac04a3665c31373686d425b5207e568cdc3e5676feb0c",
+      "source_bytes": 95090,
+      "path": "assets/optimized/robusta-anaerob-bag-628.webp",
+      "width": 628,
+      "height": 610,
+      "bytes": 71010
+    },
+    {
+      "source": "assets/robusta-anaerob-green.webp",
+      "source_sha256": "1bc9b91eb094cee28421874cf6a5baa41d3ea151f5a59f3e9dce5c6443f5596f",
+      "source_bytes": 31418,
+      "path": "assets/optimized/robusta-anaerob-green-291.webp",
+      "width": 291,
+      "height": 291,
+      "bytes": 22856
+    },
+    {
+      "source": "assets/robusta-anaerob-ground.webp",
+      "source_sha256": "1c8a6d5aeea260a53ef4886f9158319f6754f0127245889c82e1d0031129645a",
+      "source_bytes": 42462,
+      "path": "assets/optimized/robusta-anaerob-ground-292.webp",
+      "width": 292,
+      "height": 291,
+      "bytes": 28566
+    },
+    {
+      "source": "assets/robusta-anaerob-roasted.webp",
+      "source_sha256": "ea8ddc1ea08d0d712b6664c60e8562c76eb634588d3ba257d69fc3c773059ea7",
+      "source_bytes": 24342,
+      "path": "assets/optimized/robusta-anaerob-roasted-292.webp",
+      "width": 292,
+      "height": 291,
+      "bytes": 17068
+    },
+    {
+      "source": "assets/robusta-fine-bag.webp",
+      "source_sha256": "5860661a9265b77feff81d5b7fec4cca9784f80ccedb62bdaaeed6e3d1edd9ad",
+      "source_bytes": 94400,
+      "path": "assets/optimized/robusta-fine-bag-320.webp",
+      "width": 320,
+      "height": 311,
+      "bytes": 28116
+    },
+    {
+      "source": "assets/robusta-fine-bag.webp",
+      "source_sha256": "5860661a9265b77feff81d5b7fec4cca9784f80ccedb62bdaaeed6e3d1edd9ad",
+      "source_bytes": 94400,
+      "path": "assets/optimized/robusta-fine-bag-628.webp",
+      "width": 628,
+      "height": 610,
+      "bytes": 70698
+    },
+    {
+      "source": "assets/robusta-fine-green.webp",
+      "source_sha256": "4ddc41ba372181caf4a4f12fee4d967fc626a6476cee7185f49f05af40c40416",
+      "source_bytes": 26102,
+      "path": "assets/optimized/robusta-fine-green-291.webp",
+      "width": 291,
+      "height": 292,
+      "bytes": 17394
+    },
+    {
+      "source": "assets/robusta-fine-ground.webp",
+      "source_sha256": "a3e64b9391d40fad20dd6465ba7a9f09dbe7f7e46b74a7379afce7e01da144ae",
+      "source_bytes": 44594,
+      "path": "assets/optimized/robusta-fine-ground-292.webp",
+      "width": 292,
+      "height": 292,
+      "bytes": 32500
+    },
+    {
+      "source": "assets/robusta-fine-roasted.webp",
+      "source_sha256": "ba0dbf814c03a6f32f64480142b308ed8ca1228538ad277416f2355f469b53bf",
+      "source_bytes": 24156,
+      "path": "assets/optimized/robusta-fine-roasted-292.webp",
+      "width": 292,
+      "height": 292,
+      "bytes": 16142
+    }
+  ]
+}
